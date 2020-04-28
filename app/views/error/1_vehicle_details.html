@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Vehicle details
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/error/1_test_type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There's a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
+            </li>
+            <li>
+              <a href="#vrm-error">Enter your vehicle registration mark (VRM)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - IVA 9 application for a model report or tilt at a non-DVSA site</span>
+      <h1 class="govuk-heading-xl">Vehicle details</h1>
+
+      <form class="form" action="/error/1_upload_application_form" method="post">
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="1-vin">
+            Vehicle identification number (VIN)
+          </label>
+          <span id="vin-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your vehicle identification number (VIN)
+          </span>
+          <input class="govuk-input govuk-input--error" id="1-vin" name="1-vin" type="text" aria-describedby="vin-error">
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="1-vrm">
+            Vehicle registration mark (VRM)
+          </label>
+          <span id="vrm-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your vehicle registration mark (VRM)
+          </span>
+          <input class="govuk-input govuk-input--error" id="1-vrm" name="1-vrm" type="text" aria-describedby="vrm-error">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

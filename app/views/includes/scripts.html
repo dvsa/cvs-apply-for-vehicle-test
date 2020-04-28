@@ -1,0 +1,26 @@
+<!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+{% for scriptUrl in extensionConfig.scripts %}
+  <script src="{{scriptUrl}}"></script>
+{% endfor %}
+
+<script src="/public/javascripts/application.js"></script>
+
+{% if useAutoStoreData %}
+  <script src="/public/javascripts/auto-store-data.js"></script>
+{% endif %}
+
+<script src="/public/javascripts/vendor/jquery.js"></script>
+<script src="/public/javascripts/namespace.js"></script>
+<script src="/public/javascripts/helpers.js"></script>
+<script src="/public/javascripts/components/add-another/add-another.js"></script>
+<script src="/public/javascripts/components/button-menu/button-menu.js"></script>
+<script src="/public/javascripts/components/filter-toggle-button/filter-toggle-button.js"></script>
+<script src="/public/javascripts/components/form-validator/form-validator.js"></script>
+<script src="/public/javascripts/components/multi-file-upload/multi-file-upload.js"></script>
+<script src="/public/javascripts/components/multi-select/multi-select.js"></script>
+<script src="/public/javascripts/components/password-reveal/password-reveal.js"></script>
+<script src="/public/javascripts/components/rich-text-editor/rich-text-editor.js"></script>
+<script src="/public/javascripts/components/search-toggle/search-toggle.js"></script>
+<script src="/public/javascripts/components/sortable-table/sortable-table.js"></script>

@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Application type
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/error/1_vehicle_type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There's a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#application-type-error">Select an application type</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1</span>
+      <h1 class="govuk-heading-xl">Application type</h1>
+
+      <form class="form" action="/error/1_test_type" method="post">
+
+        <div class="govuk-form-group govuk-form-group--error">
+
+          <span id="application-type-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select an application type
+          </span>
+
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-an-application-type" name="1-select-an-application-type" type="radio" value="Individual vehicle approval (IVA)">
+                <label class="govuk-label govuk-radios__label" for="1-select-an-application-type">
+                  Individual vehicle approval (IVA)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-an-application-type-2" name="1-select-an-application-type" type="radio" value="ADR carriage of dangerous goods">
+                <label class="govuk-label govuk-radios__label" for="1-select-an-application-type-2">
+                  ADR carriage of dangerous goods
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-an-application-type-3" name="1-select-an-application-type" type="radio" value="Emission certificate">
+                <label class="govuk-label govuk-radios__label" for="1-select-an-application-type-3">
+                  Emission certificate
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-an-application-type-4" name="1-select-an-application-type" type="radio" value="Certificate of keeper of motor vehicle">
+                <label class="govuk-label govuk-radios__label" for="1-select-an-application-type-4">
+                  Certificate of keeper of motor vehicle
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-an-application-type-5" name="1-select-an-application-type" type="radio" value="International transport of goods under cover of TIR carnets">
+                <label class="govuk-label govuk-radios__label" for="1-select-an-application-type-5">
+                  International transport of goods under cover of TIR carnets
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-an-application-type-6" name="1-select-an-application-type" type="radio" value="Plating and testing">
+                <label class="govuk-label govuk-radios__label" for="1-select-an-application-type-6">
+                  Plating and testing
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

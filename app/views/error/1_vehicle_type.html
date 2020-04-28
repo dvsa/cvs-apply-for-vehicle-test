@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Vehicle type
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There's a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#vehicle-type-error">Select a vehicle type</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1</span>
+      <h1 class="govuk-heading-xl">Vehicle type</h1>
+
+      <form class="form" action="/error/1_application_type" method="post">
+
+        <div class="govuk-form-group govuk-form-group--error">
+
+          <span id="vehicle-type-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select a vehicle type
+          </span>
+
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type" name="1-select-a-vehicle-type" type="radio" value="Heavy goods vehicle (HGV)">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type">
+                  Heavy goods vehicle (HGV)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type-2" name="1-select-a-vehicle-type" type="radio" value="Trailer">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-2">
+                  Trailer
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type-3" name="1-select-a-vehicle-type" type="radio" value="Light goods vehicle (LGV)">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-3">
+                  Light goods vehicle (LGV)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type-4" name="1-select-a-vehicle-type" type="radio" value="Public service vehicle (PSV)">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-4">
+                  Public service vehicle (PSV)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type-5" name="1-select-a-vehicle-type" type="radio" value="Car">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-5">
+                  Car
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type-6" name="1-select-a-vehicle-type" type="radio" value="Motorbike">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-6">
+                  Motorbike
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

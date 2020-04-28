@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Contact details
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/error/personal_details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There's a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#telephone-error">Enter your telephone number</a>
+            </li>
+            <li>
+              <a href="#email-error">Enter your email address</a>
+            </li>
+            <li>
+              <a href="#confirm-email-error">Email address and confirmed email address do not match</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 class="govuk-heading-xl">Contact details</h1>
+
+      <form class="form" action="/error/contact_details_alt" method="post">
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="telephone-number">
+            Telephone number
+          </label>
+          <span id="telephone-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your telephone number
+          </span>
+          <input class="govuk-input govuk-input--error" id="telephone-number" name="telephone-number" type="text" aria-describedby="telephone-error">
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="email-address">
+            Email address
+          </label>
+          <span id="email-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your email address
+          </span>
+          <input class="govuk-input govuk-input--error" id="email-address" name="email-address" type="text" aria-describedby="email-error">
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="confirm-email-address">
+            Re-type email address
+          </label>
+          <span id="email-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your email address
+          </span>
+          <input class="govuk-input govuk-input--error" id="confirm-email-address" name="confirm-email-address" type="text" aria-describedby="confirm-email-error">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

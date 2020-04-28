@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Upload supporting documents
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/error/1_upload_application_form">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There's a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#supporting-documents-error">Upload your supporting documents</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - IVA 9 application for a model report or tilt at a non-DVSA site</span>
+      <h1 class="govuk-heading-xl">Upload supporting documents</h1>
+
+      <form class="form" action="/error/1_test_centre_preferences" method="post">
+        
+        <p class="govuk-body">You need to upload the documents that are required. For documents that are optional to upload, uploading these might help processing your application faster.</p>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Document</th>
+              <th scope="col" class="govuk-table__header">Upload required</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Model report</th>
+              <td class="govuk-table__cell">No</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Export certificate</th>
+              <td class="govuk-table__cell">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Import certificate</th>
+              <td class="govuk-table__cell">Optional</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="govuk-form-group govuk-form-group--error">
+
+          <div class="moj-multi-file-upload">
+            <div class="moj-multi-file__uploaded-files moj-hidden">
+              <h2 class="govuk-heading-s">Files added</h2>
+              <div class="govuk-summary-list moj-multi-file-upload__list">
+          
+              </div>
+            </div>
+        
+            <div class="moj-multi-file-upload__upload">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-body" for="1-supporting-documents">
+                  Upload a file
+                </label>
+
+                <span id="supporting-documents-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> Upload your supporting documents
+                </span>
+
+                <input class="govuk-file-upload moj-multi-file-upload__input" id="1-supporting-documents" name="1-supporting-documents" type="file" multiple="">
+              </div>
+        
+              <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+                Upload file
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+  <script>
+    if(typeof MOJFrontend.MultiFileUpload !== 'undefined') {
+      new MOJFrontend.MultiFileUpload({
+        container: $('.moj-multi-file-upload'),
+        uploadUrl: '/ajax-upload',
+        deleteUrl: '/ajax-delete'
+      });
+    }
+  </script>
+
+{% endblock %}

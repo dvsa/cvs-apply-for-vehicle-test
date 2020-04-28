@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Cookies
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="javascript: history.go(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Cookies
+      </h1>
+
+      <p>The online apply for a vehicle test service puts small files (known as ‘cookies’) onto your computer in order to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>remember what messages you’ve seen so you’re not shown them again</li>
+        <li>understand how you use the service so we can update and improve it</li>
+        <li>temporarily store information you enter to support your application</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        The cookies we use don’t identify you personally.
+      </div>
+
+      <p>Find out <a href="#">how to manage cookies</a>.</p>
+
+      <h3 class="govuk-heading-m">Introductory cookie message</h3>
+      <p>When you first use the service we show a ‘cookie message’. We then store a cookie on your computer so it knows not to show this message again.</p>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Purpose</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Expires</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">seen_cookie_message</td>
+            <td class="govuk-table__cell">Lets us know you've already seen our cookie message</td>
+            <td class="govuk-table__cell">1 month</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="govuk-heading-m">Measuring site use</h3>
+      <p>
+        We use Google Analytics to collect information about how you use this service. This helps us check it’s meeting your need and make improvements.<br><br>
+        Google Analytics stores information about:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how you got to the site</li>
+        <li>pages you visit and how long you spend on them</li>
+        <li>what you click on</li>
+      </ul>
+      <p>No personal details are stored with this information, so you can’t be identified.</p>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Purpose</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Expires</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">_ga</td>
+            <td class="govuk-table__cell">Used to distinguish users</td>
+            <td class="govuk-table__cell">2 years</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">_gat</td>
+            <td class="govuk-table__cell">Used to throttle request rate</td>
+            <td class="govuk-table__cell">10 minutes</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">_gcl_au</td>
+            <td class="govuk-table__cell">Used by Google AdSense for experimenting with advertisement efficiency across websites using their services</td>
+            <td class="govuk-table__cell">3 months</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">_gid</td>
+            <td class="govuk-table__cell">Used to distinguish users</td>
+            <td class="govuk-table__cell">24 hours</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">_gac</td>
+            <td class="govuk-table__cell">Contains campaign related information for the user</td>
+            <td class="govuk-table__cell">90 days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-inset-text">
+        Google isn’t allowed to use or share our analytics data.
+      </div>
+
+      <p>You can <a href="#">opt out of Google Analytics cookies</a>.</p>
+
+      <h3 class="govuk-heading-m">Session cookies</h3>
+      <p>We store session cookies on your computer to help keep your information secure while you use the service.</p>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Purpose</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Expires</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">hmpo.*.sid</td>
+            <td class="govuk-table__cell">Stores a session ID and temporarily stores data you enter to enable you to fill out and make an application</td>
+            <td class="govuk-table__cell">When you close your browser</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">lang</td>
+            <td class="govuk-table__cell">Stores your language choice</td>
+            <td class="govuk-table__cell">When you close your browser</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">pex-last-access</td>
+            <td class="govuk-table__cell">Stores the time you last accessed the service</td>
+            <td class="govuk-table__cell">24 hours</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="govuk-heading-m">Error detection</h3>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Purpose</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Expires</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">hmpo-sc-wizard</td>
+            <td class="govuk-table__cell">Used to detect errors and show relevant content - eg if your session has expired</td>
+            <td class="govuk-table__cell">When you close your browser</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">pex-submitted</td>
+            <td class="govuk-table__cell">Used to detect a previously submitted application and show relevant content</td>
+            <td class="govuk-table__cell">1 month</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">pex-cc</td>
+            <td class="govuk-table__cell">Used to detect if cookies are enabled and show relevant content</td>
+            <td class="govuk-table__cell">When you close your browser</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+{% endblock %}

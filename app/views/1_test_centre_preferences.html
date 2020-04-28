@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Test centre preferences
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/1_upload_supporting_documents">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - {{ data['1-select-a-test-type'] }}</span>
+      <h1 class="govuk-heading-xl">Test centre preferences</h1>
+
+      <form class="form" action="/1_add_another_vehicle" method="post">
+
+        <div class="govuk-form-group">
+          <div class="govuk-inset-text">
+            Use the <a class="govuk-link" href="https://www.google.com/maps/d/viewer?mid=1O2NqPWbUf4qmRLfQl2nHitGrwBzc-g6f" target="_blank">vehicle approval and specialist test locations</a> service to locate your preferred test location, and find out more details about each location. An alternate location can be useful if your preferred test location is unavailable, however it is not required.
+          </div>
+          
+          <label class="govuk-label" for="input-autocomplete">Preferred test location</label>
+          <div class="govuk-body govuk-!-width-two-thirds" id="input-autocomplete-container-pre"></div>
+
+          <label class="govuk-label" for="input-autocomplete">Alternate test location (optional)</label>
+          <div class="govuk-body govuk-!-width-two-thirds" id="input-autocomplete-container-alt"></div>
+
+          <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+          <script type="text/javascript">
+            const testCentres = [
+              'Yeading, London',
+              'Purfleet, Essex',
+              'Chelmsford, Essex',
+              'Leighton Buzzard, Bedfordshire',
+              'Halesowen, West Midlands',
+              'Birmingham, West Midlands'
+            ];
+
+            accessibleAutocomplete({
+              element: document.querySelector('#input-autocomplete-container-pre'),
+              id: 'test-centre',
+              source: testCentres,
+              placeholder: 'Start typing',
+              minLength: 2,
+              displayMenu: 'overlay'
+            });
+
+            accessibleAutocomplete({
+              element: document.querySelector('#input-autocomplete-container-alt'),
+              id: 'test-centre',
+              source: testCentres,
+              placeholder: 'Start typing',
+              minLength: 2,
+              displayMenu: 'overlay'
+            });
+          </script>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

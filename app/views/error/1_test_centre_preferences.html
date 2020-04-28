@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Test centre preferences
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/error/1_upload_supporting_documents">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There's a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#preferred-test-centre-error">Enter your preferred test location</a>
+            </li>
+            <li>
+              <a href="#alternate-test-centre-error">Enter your alternate test location</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - IVA 9 application for a model report or tilt at a non-DVSA site</span>
+      <h1 class="govuk-heading-xl">Test centre preferences</h1>
+
+      <form class="form" action="/error/1_add_another_vehicle" method="post">
+
+        <div class="govuk-inset-text">
+          Use the <a class="govuk-link" href="https://www.google.com/maps/d/viewer?mid=1O2NqPWbUf4qmRLfQl2nHitGrwBzc-g6f" target="_blank">Vehicle approval and specialist test locations</a> service to locate your preferred test centre, and find out more details about each centre. An alternate location is necessary in case the preferred location is unavailable.
+        </div>
+          
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="input-autocomplete">Preferred test location</label>
+          <span id="preferred-test-centre-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your preferred test location
+          </span>
+          <div class="govuk-body" id="input-autocomplete-container-pre"></div>
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label" for="input-autocomplete">Alternate test location</label>
+          <span id="alternate-test-centre-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter your alternate test location
+          </span>
+          <div class="govuk-body" id="input-autocomplete-container-alt"></div>
+        </div>
+
+        <script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+        <script type="text/javascript">
+          let change = (x) => {
+            let box = document.getElementById(`${x}`);
+
+            box.className =  'govuk-input govuk-input--error';
+            box.setAttribute('aria-describedby', `${x}-error`);
+          }
+
+          const testCentres = [
+            'Yeading, London',
+            'Ealing, London',
+            'Walthamstow, London',
+            'Purfleet, Essex',
+            'Worcester, West Midlands',
+            'Birmingham, West Midlands'
+          ];
+
+          accessibleAutocomplete({
+            element: document.querySelector('#input-autocomplete-container-pre'),
+            id: 'preferred-test-centre',
+            source: testCentres,
+            placeholder: 'Start typing',
+            minLength: 2,
+            displayMenu: 'overlay'
+          });
+          change('preferred-test-centre');
+          document.body.addEventListener("click", function (evt) { change('preferred-test-centre') });
+
+          accessibleAutocomplete({
+            element: document.querySelector('#input-autocomplete-container-alt'),
+            id: 'alternate-test-centre',
+            source: testCentres,
+            placeholder: 'Start typing',
+            minLength: 2,
+            displayMenu: 'overlay'
+          });
+          change('alternate-test-centre');
+          document.body.addEventListener("click", function (evt) { change('alternate-test-centre') });
+        </script>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
