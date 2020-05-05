@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Apply for a vehicle test - Payment and booking information
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="javascript: history.go(-1)">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Payment and booking information
+      </h1>
+
+      <h3 class="govuk-heading-m">Vehicle test guidance</h3>
+      <p>Refer to the information below once you have received email / postal confirmation that your vehicle test application has passed initial assessment.</p>
+
+      <div class="govuk-inset-text">
+        To book, cancel or amend an appointment, contact the Booking Section on <b>0300 123 900</b> and select option <b>one</b>.
+      </div>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                VAT information
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class='govuk-body'>Rate will change depending on the vehicle testing type:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>statuary vehicle testing is zero rated, attracting 0% VAT;</li>
+              <li>voluntary vehicle testing is standard rated, attracting 20% VAT;</li>
+              <li>retained fees are standard rated, attracting 20% VAT.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Paying for your vehicle test(s)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <p class='govuk-body'>To pay for your test with a credit / debit card:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>contact the Booking Section on <b>0300 123 9000</b> and select option <b>one</b>;</li>
+              <li>when you are put through to a call operator, explain to them that you are paying for a vehicle test and quote your application reference number;</li>
+              <li>when asked, provide your Visa / Mastercard details including:</li>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>card number</li>
+                <li>CSV / CVV number</li>
+                <li>account holder / name on card;</li>
+              </ul>
+              <li>the call operator will provide a cost breakdown of your entire order, confirming the fee required for your test(s).</li>
+            </ul>
+            <p class='govuk-body' style="margin-top: 40px;">You can also pay for your test with a pre-funded account (PFA) or cheque.</p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Booking your vehicle test(s)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>You can book your test by contacting the Booking Section for vehicles that you are having tested at a <b>DVSA Testing Facility (GVTS)</b>. The call operator will provide you with booking instructions over the phone.</li>
+              <li>You will need to book directly with the <b>Private / Authorised Testing Facility (POTF / ATF)</b> if you are having your vehicle(s) tested there.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Cancelling your vehicle test(s)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <p class='govuk-body'>Should you wish to cancel your technical or specialist test application:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><b>before</b> it is released from processing to allow examination of the vehicle, the fee paid will be refunded;</li>
+              <li><b>after</b> it has been processed and released to allow examination of the vehicle, a fee of £100 will be retained and the remaining amount refunded.</li>
+            </ul>
+            <p class='govuk-body' style="margin-top: 40px;">Should you wish to cancel your technical or specialist test application, or an allocated appointment time after an appointment has been given, then:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>If you give <b>more</b> than three working days notice prior to the appointment date, then either:</li>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>you can request a later appointment (subject to a maximum of three appointments being allocated to any one vehicle application) or not;</li>
+                <li>a fee of £100 will be retained by DVSA and the remaining amount refunded to the payee.</li>
+              </ul>
+              <li>If you give three working days or <b>less</b> notice prior to the appointment date then the whole fee will be forfeited.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Amending your vehicle test(s)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <p class='govuk-body'>If you would like to keep an appointment time that has been allocated and change the vehicle nominated you can get a different vehicle tested at a previously appointed time (subject to a maximum of three appointments per application), provided:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>both vehicles already have an appointment time allocated;</li>
+              <li>the appointment is booked using the same pre-funded account (PFA), or by the same applicant if paying by card;</li>
+              <li>the vehicle is the same test category/ type with the same test duration;</li>
+              <li>the change is made before midday on the working day before the appointment.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Changing your vehicle test location(s)
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+            <p class='govuk-body'>If you have made an appointment at a <b>DVSA Testing Facility (GVTS)</b> and then change it to a <b>Private / Authorised Testing Facility (POTF / ATF)</b>, the appointment with the <b>GVTS</b> must be cancelled or you will be charged for failing to attend the appointment.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="govuk-heading-m" style="margin-top: 30px;">Additional information</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>If you do not present the nominated vehicle at the allocated time, the fee will be forfeit and you will need to <a href="/index">submit a new application</a>.</li>
+        <li>If a previously allocated appointment is not filled with another vehicle application, the above cancellation policy will apply.</li>
+        <li>Any test appointment changes DVSA has to make due to unforseen circumstances will not be counted as part of your test allocation.</li>
+      </ul>
+
+    </div>
+
+  </div>
+{% endblock %}
