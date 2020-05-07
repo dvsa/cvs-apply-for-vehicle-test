@@ -7,6 +7,7 @@
           <p>We use <a href="/cookies.html">cookies to collect information</a> about how you use the 'Apply for a vehicle test' service. 
           We use this information to improve government services.</p>
           <button onclick="closeCookieBanner()" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Accept cookies</button>
+          <button style="margin-left: 30px;" onclick="closeCookieBanner()" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Set cookie preferences</button>
         </div>
       </div>
     </div>
@@ -172,14 +173,14 @@
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
 
-      <p>Use this service to:</p>
+      <p>Use this service to apply for a:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>apply for a technical vehicle test</li>
-        <li>apply for a specialist vehicle test</li>
+        <li>technical vehicle test</li>
+        <li>specialist vehicle test</li>
       </ul>
 
-      <p>Applying takes around 5 minutes (per vehicle test).</p>
+      <p>Applying can take up to 5 minutes per vehicle test.</p>
 
       <div class="govuk-inset-text">
         The apply for a vehicle test service is used to make technical and specialist test applications only. The <a href="https://www.gov.uk/annual-test-for-lorries-buses-and-trailers" target="_blank">annual test (MOT) for lorries, buses and trailers</a> page offers guidance on how to book an annual test.
@@ -191,7 +192,9 @@
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
       </a>
-      <p class="govuk-body-s" style="width: 250px">Your session will timeout after 30 minutes of inactivity.</p>
+      <!-- <p class="govuk-body-s" style="width: 250px">Your session will timeout after 30 minutes of inactivity.</p> -->
+
+      <p class="govuk-body" style="margin-top: 30px;">Your session will timeout after 30 minutes of inactivity.</p>
 
       <h2 class="govuk-heading-m" style="margin-top: 35px;">Before you start</h2>
 
