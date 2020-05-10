@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a vehicle test - Add another vehicle
+  Error: Add another vehicle - Apply for a vehicle test
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/error/1_test_centre_preferences">Back</a>
+  <a class="govuk-back-link" href="#">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,27 +26,26 @@
 
       <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
         <h2 class="govuk-error-summary__title" id="error-summary-title">
-          There's a problem
+          There is a problem
         </h2>
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#yes-no-error">Select yes or no</a>
+              <a href="#yes-error">Select yes or no</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <h1 class="govuk-heading-xl">Do you want to add another vehicle?</h1>
+      <h1 class="govuk-heading-l">Do you want to add another vehicle?</h1>
 
-      <form class="form" action="/error/2_vehicle_type" method="post">
+      <form class="form" action="#" method="post">
 
         <div class="govuk-form-group govuk-form-group--error">
-          <span id="yes-no-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span> Select yes or no
-          </span>
-
           <fieldset class="govuk-fieldset" aria-describedby="add-another-vehicle-hint">
+            <span class="govuk-error-message">
+              <span class="govuk-visually-hidden" id="yes-error">Error:</span> Select yes or no
+            </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="add-another-vehicle" name="add-another-vehicle" type="radio" value="yes">

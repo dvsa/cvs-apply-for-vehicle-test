@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a vehicle test - Vehicle type
+  Error: Vehicle type - Apply for a vehicle test
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/home">Back</a>
+  <a class="govuk-back-link" href="#">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,12 +26,12 @@
 
       <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
         <h2 class="govuk-error-summary__title" id="error-summary-title">
-          There's a problem
+          There is a problem
         </h2>
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#vehicle-type-error">Select a vehicle type</a>
+              <a href="#vehicle-error">Select your vehicle type</a>
             </li>
           </ul>
         </div>
@@ -40,15 +40,13 @@
       <span class="govuk-caption-xl">Vehicle 1 of 1</span>
       <h1 class="govuk-heading-xl">Vehicle type</h1>
 
-      <form class="form" action="/error/1_application_type" method="post">
+      <form class="form" action="#" method="post">
 
         <div class="govuk-form-group govuk-form-group--error">
-
-          <span id="vehicle-type-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span> Select a vehicle type
-          </span>
-
           <fieldset class="govuk-fieldset">
+            <span class="govuk-error-message">
+              <span class="govuk-visually-hidden" id="vehicle-error">Error:</span> Select your vehicle type
+            </span>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="1-select-a-vehicle-type" name="1-select-a-vehicle-type" type="radio" value="Heavy goods vehicle (HGV)">
@@ -77,13 +75,13 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="1-select-a-vehicle-type-5" name="1-select-a-vehicle-type" type="radio" value="Car">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-5">
-                  Car
+                  Passenger car
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type-6" name="1-select-a-vehicle-type" type="radio" value="Motorbike">
+                <input class="govuk-radios__input" id="1-select-a-vehicle-type-6" name="1-select-a-vehicle-type" type="radio" value="Motorcycle">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-6">
-                  Motorbike
+                  Motorcycle
                 </label>
               </div>
             </div>
