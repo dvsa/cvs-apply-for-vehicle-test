@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a vehicle test - Vehicle details
+  Vehicle details - Apply for a vehicle test
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,6 +33,12 @@
           <label class="govuk-label" for="1-vin">
             Vehicle identification number (VIN)
           </label>
+          <span id="hint" class="govuk-hint">
+            <ul>
+              <li>Most vehicles registered after 1980 have a 17 character VIN</li>
+              <li>Vehicles registered earlier should have an 8 or 21 character VIN</li>
+            </ul>
+          </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
         </div>
 
@@ -55,6 +61,14 @@
                   <label class="govuk-label" for="1-vrm">
                     Vehicle registration mark (VRM)
                   </label>
+                  <span id="hint" class="govuk-hint">
+                    <span>This must be written in the form AANNBBB, where:</span>
+                    <ul>
+                      <li>A is the DVLA memory tag (always required)</li>
+                      <li>N is the age identifier (always required)</li>
+                      <li>B are random letters (not required)</li>
+                    </ul>
+                  </span>
                   <input class="govuk-input govuk-!-width-two-thirds" id="1-vrm" name="1-vrm" type="text">
                 </div>
               </div>

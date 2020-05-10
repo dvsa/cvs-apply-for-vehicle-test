@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Error: Apply for a vehicle test - Vehicle details
+  Error: Vehicle details - Apply for a vehicle test
 {% endblock %}
 
 {% block beforeContent %}
@@ -34,7 +34,7 @@
               <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
             </li>
             <li>
-              <a href="#trailer-error">Enter your DVSA trailer identification number (trailer ID)</a>
+              <a href="#trailer-error">Enter your DVSA trailer identification number (Trailer ID)</a>
             </li>
           </ul>
         </div>
@@ -78,13 +78,13 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="trailer-id">
-                    DVSA trailer identification number (trailer ID)
+                    DVSA trailer identification number (Trailer ID)
                   </label>
                   <span id="trailer-id-hint" class="govuk-hint">
                     Must be in the format CXXXXXX or XXXXXXT
                   </span>
                   <span class="govuk-error-message">
-                    <span class="govuk-visually-hidden" id="trailer-error">Error:</span> Enter your DVSA trailer identification number (trailer ID)
+                    <span class="govuk-visually-hidden" id="trailer-error">Error:</span> Enter your DVSA trailer identification number (Trailer ID)
                   </span>
                   <input class="govuk-input govuk-!-width-two-thirds" id="trailer-id" name="trailer-id" type="text">
                 </div>

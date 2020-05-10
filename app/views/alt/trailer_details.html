@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a vehicle test - Vehicle details
+  Vehicle details - Apply for a vehicle test
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,6 +33,12 @@
           <label class="govuk-label" for="1-vin">
             Vehicle identification number (VIN)
           </label>
+          <span id="hint" class="govuk-hint">
+            <ul>
+              <li>Most vehicles registered after 1980 have a 17 character VIN</li>
+              <li>Vehicles registered earlier should have an 8 or 21 character VIN</li>
+            </ul>
+          </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
         </div>
 
@@ -53,7 +59,7 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="trailer-id">
-                    Trailer ID
+                    DVSA trailer identification number (Trailer ID)
                   </label>
                   <span id="trailer-id-hint" class="govuk-hint">
                     Must be in the format CXXXXXX or XXXXXXT

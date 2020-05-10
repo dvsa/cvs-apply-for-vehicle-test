@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply for a vehicle test - Contact details
+  Contact details - Apply for a vehicle test
 {% endblock %}
 
 {% block beforeContent %}
@@ -39,6 +39,9 @@
           <label class="govuk-label" for="email-address">
             Email address
           </label>
+          <span id="hint" class="govuk-hint">
+            Email address must be in the format name@example.com
+          </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text">
         </div>
 
