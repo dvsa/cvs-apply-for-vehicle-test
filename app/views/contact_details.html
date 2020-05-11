@@ -32,7 +32,10 @@
           <label class="govuk-label" for="telephone-number">
             Telephone number
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text">
+          <span id="hint" class="govuk-hint">
+            Telephone number must be in the correct format, like 07700 900 982
+          </span>
+          <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
         </div>
 
         <div class="govuk-form-group">
@@ -40,16 +43,16 @@
             Email address
           </label>
           <span id="hint" class="govuk-hint">
-            Email address must be in the format name@example.com
+            Email address must be in the correct format, like name@example.com
           </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="email" autocomplete="email" spellcheck="false">
         </div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="confirm-email-address">
             Re-type email address
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="email" spellcheck="false"> 
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
