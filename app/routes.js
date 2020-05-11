@@ -5,10 +5,8 @@ const cache = require( '../lib/cache' );
 
 function getErrorMessage(item) {
   var message = '';
-  if(item.error.code == 'FILE_TYPE') {
-    message += item.file.originalname + ' must be a pdf, png or jpeg';
-  } else if(item.error.code == 'LIMIT_FILE_SIZE') {
-    message += item.file.originalname + ' must be smaller than 2mb';
+  if(item.error.code == 'LIMIT_FILE_SIZE') {
+    message += item.file.originalname + ' must be smaller than 5mb';
   }
   return message;
 }
@@ -44,17 +42,7 @@ const upload = multer( {
       req.rejectedFiles = [];
     }
 
-    if( file.mimetype !== 'image/png' && file.mimetype !== 'application/pdf' && file.mimetype !== 'image/jpg' && file.mimetype !== 'image/jpeg') {
-      cb(null, false);
-      req.rejectedFiles.push({
-        file: file,
-        error: {
-          code: 'FILE_TYPE'
-        }
-      });
-    } else {
-      cb(null, true);
-    }
+    cb(null, true);
   }
 } ).array('documents', 10);
 
@@ -153,15 +141,8 @@ const uploadAjax = multer( {
   limits: { fileSize: 5000000 },
   fileFilter: function( req, file, cb ){
     let ok = false;
-    if( file.mimetype !== 'image/png' && file.mimetype !== 'application/pdf' && file.mimetype !== 'image/jpg' && file.mimetype !== 'image/jpeg'){
-      return cb({
-        code: 'FILE_TYPE',
-        field: 'documents',
-        file: file
-      }, false);
-    } else {
-      return cb(null, true);
-    }
+
+    return cb(null, true);
   }
 } ).single('documents');
 
@@ -169,11 +150,9 @@ router.post('/ajax-upload', getUploadedFiles, function( req, res ){
 
   uploadAjax(req, res, function(error, val1, val2) {
     if(error) {
-      if(error.code == 'FILE_TYPE') {
-        error.message = error.file.originalname + ' must be a pdf, png or jpeg';
-      } else if(error.code == 'LIMIT_FILE_SIZE') {
-        // error.message = error.file.originalname + ' must be smaller than 2mb';
-        error.message = 'The file must be smaller than 2mb';
+      if(error.code == 'LIMIT_FILE_SIZE') {
+        // error.message = error.file.originalname + ' must be smaller than 5mb';
+        error.message = 'The file must be smaller than 5mb';
       }
 
       var response = {
