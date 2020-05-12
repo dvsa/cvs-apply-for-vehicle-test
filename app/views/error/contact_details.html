@@ -47,10 +47,16 @@
 
       <form class="form" action="#" method="post">
 
+        <h3 class="govuk-heading-m">Communication</h3>
         <div class="govuk-form-group govuk-form-group--error">
           <label class="govuk-label" for="telephone-number">
             Telephone number
           </label>
+          <span id="hint" class="govuk-hint">
+            Telephone number must be in the correct UK format.
+            <br>
+            For example, '01632 960 001'.
+          </span>
           <span class="govuk-error-message">
             <span class="govuk-visually-hidden" id="telephone-error">Error:</span> Enter your telephone number
           </span>
@@ -62,7 +68,9 @@
             Email address
           </label>
           <span id="hint" class="govuk-hint">
-            Email address must be in the format name@example.com
+            Email address must be in the correct format.
+            <br>
+            For example, 'name@example.com'.
           </span>
           <span class="govuk-error-message">
             <span class="govuk-visually-hidden" id="email-error">Error:</span> Enter your email address
@@ -80,11 +88,12 @@
           <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="text">
         </div>
 
+        <h3 class="govuk-heading-m" style="margin-top: 60px;">Bussiness information</h3>
         <div class="govuk-form-group">
           <label class="govuk-label" for="company-name">
             Business name (optional)
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="company-name" name="company-name" type="text" spellcheck="false">
+          <input class="govuk-input" id="company-name" name="company-name" type="text" spellcheck="false">
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
