@@ -31,10 +31,7 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#telephone-error">Enter your UK telephone number</a>
-            </li>
-            <li>
-              <a href="#email-error">Email addresses do not match</a>
+              <a href="#email-error">Enter your email address</a>
             </li>
           </ul>
         </div>
@@ -45,17 +42,14 @@
       <form class="form" action="#" method="post">
 
         <!-- <h3 class="govuk-heading-m">Communication</h3> -->
-        <div class="govuk-form-group govuk-form-group--error">
+        <div class="govuk-form-group">
           <label class="govuk-label" for="telephone-number">
             UK telephone number
           </label>
           <span id="hint" class="govuk-hint">
             For example '01632 960 001'
           </span>
-          <span class="govuk-error-message">
-            <span class="govuk-visually-hidden" id="telephone-error">Error:</span> Enter your UK telephone number
-          </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text" value="01632 960 001">
         </div>
 
         <div class="govuk-form-group govuk-form-group--error">
@@ -66,14 +60,15 @@
             For example 'name@example.com'
           </span>
           <span class="govuk-error-message">
-            <span class="govuk-visually-hidden" id="email-error">Error:</span> Email addresses do not match
+            <span class="govuk-visually-hidden" id="email-error">Error:</span> Enter your email address
           </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text">
-
+        </div>
+        <div class="govuk-form-group">
           <label class="govuk-label" for="confirm-email-address" style="margin-top: 30px;">
             Confirm email address
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="text" value="name@example.com">
         </div>
 
         <!-- <h3 class="govuk-heading-m" style="margin-top: 60px;">Bussiness information</h3> -->

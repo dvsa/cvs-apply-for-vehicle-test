@@ -33,9 +33,6 @@
             <li>
               <a href="#telephone-error">Enter your UK telephone number</a>
             </li>
-            <li>
-              <a href="#email-error">Email addresses do not match</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -58,22 +55,20 @@
           <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="text">
         </div>
 
-        <div class="govuk-form-group govuk-form-group--error">
+        <div class="govuk-form-group">
           <label class="govuk-label" for="email-address">
             Email address
           </label>
           <span id="hint" class="govuk-hint">
             For example 'name@example.com'
           </span>
-          <span class="govuk-error-message">
-            <span class="govuk-visually-hidden" id="email-error">Error:</span> Email addresses do not match
-          </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text">
-
-          <label class="govuk-label" for="confirm-email-address" style="margin-top: 30px;">
+          <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text" value="name@example.com">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="confirm-email-address">
             Confirm email address
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="text" value="name@example.com">
         </div>
 
         <!-- <h3 class="govuk-heading-m" style="margin-top: 60px;">Bussiness information</h3> -->
