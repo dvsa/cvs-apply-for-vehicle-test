@@ -31,10 +31,7 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
-            </li>
-            <li>
-              <a href="#vrm-error">Enter your vehicle registration mark (VRM)</a>
+              <a href="#vrm-error">Enter a vehicle registration mark (VRM) in the correct format</a>
             </li>
           </ul>
         </div>
@@ -45,7 +42,7 @@
 
       <form class="form" action="#" method="post">
 
-        <div class="govuk-form-group govuk-form-group--error">
+        <div class="govuk-form-group">
           <label class="govuk-label" for="1-vin">
             Vehicle identification number (VIN)
           </label>
@@ -56,10 +53,7 @@
               <li>before 1980 have an 8 or 21 character VIN</li>
             </ul>
           </span>
-          <span class="govuk-error-message">
-            <span class="govuk-visually-hidden" id="vin-error">Error:</span> Enter your vehicle identification number (VIN)
-          </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text" value="1HGBH41JXMN109186">
         </div>
 
         <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2>
@@ -90,7 +84,7 @@
                     </ul>
                   </span>
                   <span class="govuk-error-message">
-                    <span class="govuk-visually-hidden" id="vrm-error">Error:</span> Enter your vehicle registration mark (VRM)
+                    <span class="govuk-visually-hidden" id="vrm-error">Error:</span> Enter a vehicle registration mark (VRM) in the correct format
                   </span>
                   <input class="govuk-input govuk-!-width-two-thirds" id="1-vrm" name="1-vrm" type="text">
                 </div>

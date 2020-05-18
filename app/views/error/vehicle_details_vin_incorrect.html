@@ -31,10 +31,7 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
-            </li>
-            <li>
-              <a href="#vrm-error">Enter your vehicle registration mark (VRM)</a>
+              <a href="#vin-error">Enter a vehicle identification number (VIN) in the correct format</a>
             </li>
           </ul>
         </div>
@@ -57,7 +54,7 @@
             </ul>
           </span>
           <span class="govuk-error-message">
-            <span class="govuk-visually-hidden" id="vin-error">Error:</span> Enter your vehicle identification number (VIN)
+            <span class="govuk-visually-hidden" id="vin-error">Error:</span> Enter a vehicle identification number (VIN) in the correct format
           </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
         </div>
@@ -67,11 +64,11 @@
           If your vehicle has a GB registration number (number plate), your vehicle is registered in the UK.<br><br>Your vehicle does not need to be registered to continue.
         </div>
 
-        <div class="govuk-form-group govuk-form-group--error">
+        <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="1-is-registered-conditional-hint">
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-is-registered-conditional-1" name="1-is-registered" type="radio" value="yes" data-aria-controls="conditional-1-is-registered-conditional-1" checked>
+                <input class="govuk-radios__input" id="1-is-registered-conditional-1" name="1-is-registered" type="radio" value="yes" data-aria-controls="conditional-1-is-registered-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-1">
                   Yes
                 </label>
@@ -89,15 +86,12 @@
                       <li>B are random letters (not required)</li>
                     </ul>
                   </span>
-                  <span class="govuk-error-message">
-                    <span class="govuk-visually-hidden" id="vrm-error">Error:</span> Enter your vehicle registration mark (VRM)
-                  </span>
                   <input class="govuk-input govuk-!-width-two-thirds" id="1-vrm" name="1-vrm" type="text">
                 </div>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-is-registered-conditional-2" name="1-is-registered" type="radio" value="no" data-aria-controls="conditional-1-is-registered-conditional-2">
+                <input class="govuk-radios__input" id="1-is-registered-conditional-2" name="1-is-registered" type="radio" value="no" data-aria-controls="conditional-1-is-registered-conditional-2" checked>
                 <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-2">
                   No
                 </label>

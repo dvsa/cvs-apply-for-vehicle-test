@@ -31,21 +31,18 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
-            </li>
-            <li>
-              <a href="#vrm-error">Enter your vehicle registration mark (VRM)</a>
+              <a href="#trailer-error">Enter a DVSA trailer identification number (Trailer ID) in the correct format</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <span class="govuk-caption-xl">Vehicle 1 of 1 - {{ data['1-select-a-test-type'] }}</span>
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - IVA 1T category O1 statutory application</span>
       <h1 class="govuk-heading-xl">Vehicle details</h1>
 
       <form class="form" action="#" method="post">
 
-        <div class="govuk-form-group govuk-form-group--error">
+        <div class="govuk-form-group">
           <label class="govuk-label" for="1-vin">
             Vehicle identification number (VIN)
           </label>
@@ -56,15 +53,12 @@
               <li>before 1980 have an 8 or 21 character VIN</li>
             </ul>
           </span>
-          <span class="govuk-error-message">
-            <span class="govuk-visually-hidden" id="vin-error">Error:</span> Enter your vehicle identification number (VIN)
-          </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text" value="1HGBH41JXMN109186">
         </div>
 
-        <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2>
+        <h2 class="govuk-heading-l">Is your trailer registered with DVSA?</h2>
         <div class="govuk-inset-text">
-          If your vehicle has a GB registration number (number plate), your vehicle is registered in the UK.<br><br>Your vehicle does not need to be registered to continue.
+          If your trailer has a DVSA trailer identification number like C123456 or 123456T, your trailer is registered with DVSA.<br><br>Your trailer does not need to be registered to continue.
         </div>
 
         <div class="govuk-form-group govuk-form-group--error">
@@ -78,21 +72,16 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="1-vrm">
-                    Vehicle registration mark (VRM)
+                  <label class="govuk-label" for="trailer-id">
+                    DVSA trailer identification number (Trailer ID)
                   </label>
-                  <span id="hint" class="govuk-hint">
-                    This must be written in the form AANNBBB, where:
-                    <ul style="margin-top: 5px;">
-                      <li>A is the DVLA memory tag (always required)</li>
-                      <li>N is the age identifier (always required)</li>
-                      <li>B are random letters (not required)</li>
-                    </ul>
+                  <span id="trailer-id-hint" class="govuk-hint">
+                    Must be in the format C123456 or 123456T
                   </span>
                   <span class="govuk-error-message">
-                    <span class="govuk-visually-hidden" id="vrm-error">Error:</span> Enter your vehicle registration mark (VRM)
+                    <span class="govuk-visually-hidden" id="trailer-error">Error:</span> Enter a DVSA trailer identification number (Trailer ID) in the correct format
                   </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="1-vrm" name="1-vrm" type="text">
+                  <input class="govuk-input govuk-!-width-two-thirds" id="trailer-id" name="trailer-id" type="text">
                 </div>
               </div>
 
