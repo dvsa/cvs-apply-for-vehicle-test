@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Vehicle details - Apply for a vehicle test - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/alt/trailer_single_nosup/test_type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - {{ data['1-select-a-test-type'] }}</span>
+      <h1 class="govuk-heading-xl">Vehicle details</h1>
+
+      <form class="form" action="/alt/trailer_single_nosup/upload_application_form" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="1-vin">
+            Vehicle identification number (VIN)
+          </label>
+          <span id="hint" class="govuk-hint">
+            Vehicles that are registered:
+            <ul style="margin-top: 5px;">
+              <li>after 1980 have a 17 character VIN</li>
+              <li>before 1980 have an 8 or 21 character VIN</li>
+            </ul>
+          </span>
+          <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
+        </div>
+
+        <h2 class="govuk-heading-l">Is your trailer registered with DVSA?</h2>
+        <div class="govuk-inset-text">
+          If your trailer has a DVSA trailer identification number like C123456 or 123456T, your trailer is registered with DVSA.<br><br>Your trailer does not need to be registered to continue.
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="1-is-registered-conditional-hint">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-is-registered-conditional-1" name="1-is-registered" type="radio" value="yes" data-aria-controls="conditional-1-is-registered-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="trailer-id">
+                    DVSA trailer identification number (Trailer ID)
+                  </label>
+                  <span id="trailer-id-hint" class="govuk-hint">
+                    Must be in the format C123456 or 123456T
+                  </span>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="trailer-id" name="trailer-id" type="text">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-is-registered-conditional-2" name="1-is-registered" type="radio" value="no" data-aria-controls="conditional-1-is-registered-conditional-2">
+                <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

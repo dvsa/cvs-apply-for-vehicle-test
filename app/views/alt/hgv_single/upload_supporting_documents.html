@@ -18,7 +18,7 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/2_upload_application_form">Back</a>
+  <a class="govuk-back-link" href="/alt/hgv_single/upload_application_form">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,13 +26,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-xl">Vehicle 2 of 2 - {{ data['2-select-a-test-type'] }}</span>
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - {{ data['1-select-a-test-type'] }}</span>
       <h1 class="govuk-heading-xl">Upload supporting documents</h1>
 
-      <form class="form" action="/2_add_another_vehicle" method="post"> <!-- /2_test_centre_preferences -->
+      <form class="form" action="/alt/hgv_single/add_another_vehicle" method="post"> <!-- /1_test_centre_preferences -->
         
         <div class="govuk-inset-text">
-          Refer to the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/834742/iva-guidance-notes-passenger-cars-1c.pdf" target="_blank">guidance documentation</a> for information on what to upload.
+          Refer to the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/782675/application-carriage-dangerous-goods-by-road-adr-iii.pdf" target="_blank">application form</a> for information on what to upload.
         </div>
 
         <!-- <table class="govuk-table">
@@ -69,9 +69,9 @@
           <div class="moj-multi-file-upload__upload">
             <div class="govuk-form-group">
               <label class="govuk-label govuk-body" for="documents">
-                Supporting documents
+                Supporting documents (optional)
               </label>
-              <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="2-supporting-documents" type="file" multiple="">
+              <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="1-supporting-documents" type="file" multiple="">
             </div>
       
             <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">

@@ -1,0 +1,199 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Apply for a vehicle test - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/alt/hgv_single/contact_details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+      <form class="form" action="/alt/hgv_single/confirmation" method="post">
+
+        <h3 class="govuk-heading-m">Vehicle 1 of 1</h3>
+        <dl class="govuk-summary-list">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Vehicle test
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['1-select-a-vehicle-type'] }}</p>
+              <p class="govuk-body">Individual vehicle approval (IVA)</p>
+              <p class="govuk-body">{{ data['1-select-a-test-type'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">vehicle details</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              VIN
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['1-vin'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">vin</span>
+              </a>
+            </dd>
+          </div>
+
+          {% if data['1-vrm'] %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              VRM
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['1-vrm'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">vrm</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application form
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['1-application-form'] }}</p> <!--application_form_iva1c.pdf-->
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">application form</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Supporting documents
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['1-supporting-documents'] }}</p>
+              <!--
+                model_report_iva1c.jpeg
+                export_certificate_iva1c.pdf
+              -->
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">supporting documents</span>
+              </a>
+            </dd>
+          </div>
+
+          <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Preferred test location
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 0px">{{ data['input-autocomplete'][0] }}</p>
+              <p class="govuk-body">DVSA Testing Facility (GVTS)</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">preferred test location</span>
+              </a>
+            </dd>
+          </div>
+
+          {% if data['input-autocomplete'][1] %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Alternate test location
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body govuk-!-font-weight-bold" style="margin-bottom: 0px">{{ data['input-autocomplete'][1] }}</p>
+              <p class="govuk-body">Private Testing Facility (POTF)</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">alternate test location</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %} -->
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Expected processing time
+            </dt>
+            <dd class="govuk-summary-list__value">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              5 days<span class="govuk-visually-hidden">expected processing time</span>
+            </dd>
+          </div>
+
+        </dl>
+
+        <h3 class="govuk-heading-m" style="margin-top: 50px">Your details</h3>
+        <dl class="govuk-summary-list">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['first-name'] }} {{ data['last-name'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contact details
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['telephone-number'] }}</p>
+              <p class="govuk-body">{{ data['email-address'] }}</p>
+              <p class="govuk-body">{{ data['company-name'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">contact details</span>
+              </a>
+            </dd>
+          </div>
+
+        </dl>
+
+        <button class="govuk-button" data-module="govuk-button">Submit</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
