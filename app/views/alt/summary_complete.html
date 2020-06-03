@@ -26,7 +26,7 @@
 
       <h1 class="govuk-heading-xl">Check your answers</h1>
 
-      <form class="form" action="#" method="post">
+      <form class="form" action="/confirmation" method="post">
 
         <h3 class="govuk-heading-m">Vehicle 1 of 2</h3>
         <dl class="govuk-summary-list">
@@ -52,10 +52,14 @@
               VIN
             </dt>
             <dd class="govuk-summary-list__value">
+              {% if data['change-vin'] %}
+              <p class="govuk-body">{{ data['change-vin'] }}</p>
+              {% else %}
               <p class="govuk-body">FGHDGFTET6123UIPO</p>
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/alt/vin_change">
                 Change<span class="govuk-visually-hidden">vin</span>
               </a>
             </dd>
