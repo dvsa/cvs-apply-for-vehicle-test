@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Test type - Apply for a vehicle test - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/alt/motorcycle_single_nosup/vehicle_type">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1</span>
+      <h1 class="govuk-heading-xl">Test type</h1>
+
+      <div class="govuk-inset-text">
+        Clicking on a test type will reveal more information on that test type. For example, the description of that test.
+      </div>
+
+      <form class="form" action="/alt/motorcycle_single_nosup/vehicle_details" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="1-select-a-test-type-conditional-hint">
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="MSVA 1 test application" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-1">
+                  MSVA 1 test application
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-1">
+                <p class="govuk-body">
+                  Motorcycle single vehicle approval.
+                </p>
+                <br>
+                <p class="govuk-body">Expected processing time (from date of submission): <strong>10 days</strong></p>
+                <br>
+                <p class="govuk-body">Before you continue, ensure you have read the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/781666/guidance-on-filling-in-the-mvsa-application-form.pdf" target="_blank">guidance documentation</a> for this test type.</p>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-2" name="1-select-a-test-type" type="radio" value="PMSVA 1 partial test MSVA application" data-aria-controls="conditional-1-select-a-test-type-conditional-2">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-2">
+                  PMSVA 1 partial test MSVA application
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-2">
+                <p class="govuk-body">
+                  Apply for a partial Motorcycle Single Vehicle Approval (MSVA) inspection if you've had to modify your vehicle so it's equipped for use in Great Britain.
+                </p>
+                <br>
+                <p class="govuk-body">Expected processing time (from date of submission): <strong>10 days</strong></p>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-3" name="1-select-a-test-type" type="radio" value="IVA 5 request for replacement certificate" data-aria-controls="conditional-1-select-a-test-type-conditional-3">
+                <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-3">
+                  Replacement or duplicate approval certificate.
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-3">
+                <p class="govuk-body">Expected processing time (from date of submission): <strong>5 days</strong></p>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
