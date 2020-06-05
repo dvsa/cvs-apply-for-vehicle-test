@@ -54,20 +54,35 @@
   {% block footer %}
     {{ govukFooter({
       meta: {
-        items: [
-          {
-            href: "#",
-            text: "Accessibility statement"
-          },
-          {
-            href: "/cookies",
-            text: "Cookies"
-          },
-          {
-            href: "#",
-            text: "Terms and Conditions"
-          }
-        ]
+        html: '
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/cookies">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/feedback" target="_blank">
+              Feedback
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="/help_noback" target="_blank">
+              Help
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">
+              Privacy
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">
+              Terms and Conditions
+            </a>
+          </li>
+        </ul>
+        '
       }
     }) }}
   {% endblock %}

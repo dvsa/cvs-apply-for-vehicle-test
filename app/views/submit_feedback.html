@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Feedback - Apply for a vehicle test - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/feedback">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Feedback</h1>
+
+      <p class="govuk-body">Do not include any personal or financial information.</p>
+
+      <form class="form" action="/feedback_submitted" target="_self" method="post">
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+          <div class="govuk-form-group">
+            <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+        
+          <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 500 characters
+          </span>
+        
+        </div>
+
+        <button style="margin-top: 10px;" class="govuk-button" data-module="govuk-button">Submit feedback</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

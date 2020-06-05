@@ -28,6 +28,16 @@ function getUploadedFiles( req, res, next ){
   next();
 }
 
+router.post('/feedback_answer', function (req, res) {
+  let feedback = req.session.data['feedback-res']
+
+  if (feedback === 'yes') {
+    res.redirect('/submit_feedback')
+  } else {
+    res.redirect('/help')
+  }
+})
+
 ////////////////////////////////////////////////////////////////////////////////////////
 // NO JAVASCRIPT
 ////////////////////////////////////////////////////////////////////////////////////////
