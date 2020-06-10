@@ -25,27 +25,14 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 1 of 1 - {{ data['1-select-a-test-type'] }}</span>
-      <h1 class="govuk-heading-xl">Vehicle details</h1>
+      <h1 class="govuk-heading-xl">Is your vehicle registered in the UK?</h1>
+      <!-- <h1 class="govuk-heading-xl">Vehicle details</h1> -->
 
       <form class="form" action="/alt/motorcycle_single_nosup/upload_application_form" method="post">
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="1-vin">
-            Vehicle identification number (VIN)
-          </label>
-          <span id="hint" class="govuk-hint">
-            Vehicles that are registered:
-            <ul style="margin-top: 5px;">
-              <li>after 1980 have a 17 character VIN</li>
-              <li>before 1980 have an 8 or 21 character VIN</li>
-            </ul>
-          </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
-        </div>
-
-        <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2>
+        <!-- <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2> -->
         <div class="govuk-inset-text">
-          Vehicles registered in the UK have a GB registration number (number plate).<br><br>You can continue if your vehicle is not registered.
+          Vehicles registered in the UK have a GB registration number (number plate).
         </div>
 
         <div class="govuk-form-group">
@@ -58,6 +45,19 @@
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="1-vin">
+                    Vehicle identification number (VIN)
+                  </label>
+                  <span id="hint" class="govuk-hint">
+                    Vehicles that are registered:
+                    <ul style="margin-top: 5px;">
+                      <li>after 1980 have a 17 character VIN</li>
+                      <li>before 1980 have an 8 or 21 character VIN</li>
+                    </ul>
+                  </span>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
+                </div>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="1-vrm">
                     Vehicle registration mark (VRM)
@@ -79,6 +79,21 @@
                 <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-2">
                   No
                 </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="1-vin-no">
+                    Vehicle identification number (VIN)
+                  </label>
+                  <span id="hint" class="govuk-hint">
+                    Vehicles that are registered:
+                    <ul style="margin-top: 5px;">
+                      <li>after 1980 have a 17 character VIN</li>
+                      <li>before 1980 have an 8 or 21 character VIN</li>
+                    </ul>
+                  </span>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin-no" type="text">
+                </div>
               </div>
             </div>
           </fieldset>

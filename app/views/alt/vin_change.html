@@ -25,31 +25,14 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 1 of 2 - IVA 1H category N2 statutory application</span>
-      <h1 class="govuk-heading-xl">Vehicle details</h1>
+      <h1 class="govuk-heading-xl">Is your vehicle registered in the UK?</h1>
+      <!-- <h1 class="govuk-heading-xl">Vehicle details</h1> -->
 
       <form class="form" action="/alt/summary_complete" method="post">
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="change-vin">
-            Vehicle identification number (VIN)
-          </label>
-          <span id="hint" class="govuk-hint">
-            Vehicles that are registered:
-            <ul style="margin-top: 5px;">
-              <li>after 1980 have a 17 character VIN</li>
-              <li>before 1980 have an 8 or 21 character VIN</li>
-            </ul>
-          </span>
-          {% if data['change-vin'] %}
-          <input class="govuk-input govuk-!-width-two-thirds" id="change-vin" name="change-vin" type="text" value={{ data['change-vin'] }}>
-          {% else %}
-          <input class="govuk-input govuk-!-width-two-thirds" id="change-vin" name="change-vin" type="text" value="FGHDGFTET6123UIPO">
-          {% endif %}
-        </div>
-
-        <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2>
+        <!-- <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2> -->
         <div class="govuk-inset-text">
-          If your vehicle has a GB registration number (number plate), your vehicle is registered in the UK.<br><br>Your vehicle does not need to be registered to continue.
+          If your vehicle has a GB registration number (number plate), your vehicle is registered in the UK.
         </div>
 
         <div class="govuk-form-group">
@@ -62,6 +45,23 @@
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-2-is-registered-conditional-1">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="change-vin">
+                    Vehicle identification number (VIN)
+                  </label>
+                  <span id="hint" class="govuk-hint">
+                    Vehicles that are registered:
+                    <ul style="margin-top: 5px;">
+                      <li>after 1980 have a 17 character VIN</li>
+                      <li>before 1980 have an 8 or 21 character VIN</li>
+                    </ul>
+                  </span>
+                  {% if data['change-vin'] %}
+                  <input class="govuk-input govuk-!-width-two-thirds" id="change-vin" name="change-vin" type="text" value={{ data['change-vin'] }}>
+                  {% else %}
+                  <input class="govuk-input govuk-!-width-two-thirds" id="change-vin" name="change-vin" type="text" value="FGHDGFTET6123UIPO">
+                  {% endif %}
+                </div>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="2-vrm">
                     Vehicle registration mark (VRM)
@@ -84,6 +84,25 @@
                 <label class="govuk-label govuk-radios__label" for="2-is-registered-conditional-2">
                   No
                 </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-2-is-registered-conditional-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="change-vin-no">
+                    Vehicle identification number (VIN)
+                  </label>
+                  <span id="hint" class="govuk-hint">
+                    Vehicles that are registered:
+                    <ul style="margin-top: 5px;">
+                      <li>after 1980 have a 17 character VIN</li>
+                      <li>before 1980 have an 8 or 21 character VIN</li>
+                    </ul>
+                  </span>
+                  {% if data['change-vin-no'] %}
+                  <input class="govuk-input govuk-!-width-two-thirds" id="change-vin" name="change-vin-no" type="text" value={{ data['change-vin-no'] }}>
+                  {% else %}
+                  <input class="govuk-input govuk-!-width-two-thirds" id="change-vin" name="change-vin-no" type="text">
+                  {% endif %}
+                </div>
               </div>
             </div>
           </fieldset>

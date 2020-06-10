@@ -52,7 +52,11 @@
               VIN
             </dt>
             <dd class="govuk-summary-list__value">
+              {% if data['1-vin'] %}
               <p class="govuk-body">{{ data['1-vin'] }}</p>
+              {% elif data['1-vin-no'] %}
+              <p class="govuk-body">{{ data['1-vin-no'] }}</p>
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">

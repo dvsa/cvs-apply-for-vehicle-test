@@ -54,6 +54,8 @@
             <dd class="govuk-summary-list__value">
               {% if data['change-vin'] %}
               <p class="govuk-body">{{ data['change-vin'] }}</p>
+              {% elif data['change-vin-no'] %}
+              <p class="govuk-body">{{ data['change-vin-no'] }}</p>
               {% else %}
               <p class="govuk-body">FGHDGFTET6123UIPO</p>
               {% endif %}
