@@ -148,7 +148,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Apply online for a vehicle test - GOV.UK
+  Apply online for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -176,9 +176,14 @@
       <p>Use this service to apply for a:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>technical vehicle test</li>
-        <li>specialist vehicle test</li>
+        <li>vehicle test</li>
+        <li>vehicle approval</li>
+        <li>replacement certificate</li>
       </ul>
+
+      <div class="govuk-inset-text">
+      <p class="govuk-body">Do not use this service to apply for an annual test. The <a href="https://www.gov.uk/annual-test-for-lorries-buses-and-trailers" target="_blank">annual test (MOT) for lorries, buses and trailers</a> page offers guidance on how to book an annual test.</p>
+      </div>
 
       <p style="margin-bottom: 30px;">Applying can take up to 5 minutes per vehicle test.</p>
 
@@ -200,21 +205,70 @@
       <h2 class="govuk-heading-m" style="margin-top: 35px;">Before you start</h2>
 
       <!-- <p>Ensure that you have the correct application form for your application type, as well as all of the supporting documents that are needed for your applicaiton. For example, your export certificate.</p> -->
-      
-      <p class="govuk-body">Use this service to make technical and specialist test applications only. The <a href="https://www.gov.uk/annual-test-for-lorries-buses-and-trailers" target="_blank">annual test (MOT) for lorries, buses and trailers</a> page offers guidance on how to book an annual test.</p>
 
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            You can also send your application by post.
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <h3 style="margin-top: 0px; margin-bottom: 5px;">DVSA Approvals Section</h3>
-          <p style="margin-top: 0px; margin-bottom: 0px;">The Ellipse, Padley Road</p>
-          <p>Swansea SA1 8AN</p>
+      <p>To use the service you will need:</p>
+
+      <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 65px;">
+        <li>a Vehicle Identification Number (VIN) or chassis number</li>
+        <li>a Vehicle Registration Mark (VRM) if registered</li>
+      </ul>
+
+      <!-- <p class="govuk-body">You can also send your application by post.</p> -->
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="border-top: 2px solid #1d70b8; margin-top: 0px; margin-bottom: 15px;">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Resources on GOV.UK</h3>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="/payment_booking_info">
+                Payment and booking information
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/vehicle-approval" target="_blank">
+                Vehicle approval
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/specialist-tests-for-lorries" target="_blank">
+                Specialist tests for lorries
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/specialist-tests-for-coaches-and-buses" target="_blank">
+                Specialist tests for coaches and buses
+              </a>
+            </li>
+          </ul>
         </div>
-      </details>
+        <!-- <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Legacy entry points</h3>
+          <ul class="govuk-list">
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/apply-motorcycle-approval" target="_blank">
+                Apply for Motorcycle Single Vehicle Approval (MSVA)
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/apply-vehicle-approval" target="_blank">
+                Apply for Individual Vehicle Approval (IVA)
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/apply-vehicle-test-certificate-coach-bus" target="_blank">
+                Apply for a vehicle test or certificate for a coach or bus
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link govuk-!-font-weight-bold govuk-!-font-size-16" href="https://www.gov.uk/apply-vehicle-test-certificate-lorry-trailer" target="_blank">
+                Apply for a vehicle test or certificate for a lorry or trailer
+              </a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
 
     </div>
   </div>
@@ -225,7 +279,7 @@
 <footer class="govuk-footer " role="contentinfo">
   <div class="govuk-width-container ">
     <div class="govuk-footer__navigation">
-      <div class="govuk-footer__section">
+      <!-- <div class="govuk-footer__section">
         <h2 class="govuk-footer__heading govuk-heading-m">Resources on GOV.UK</h2>
         <ul class="govuk-footer__list ">
           <li class="govuk-footer__list-item">
@@ -277,14 +331,16 @@
         </ul>
       </div>
     </div>
-    <hr class="govuk-footer__section-break">
+
+    <hr class="govuk-footer__section-break"> -->
+
     <div class="govuk-footer__meta">
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
 
         <h2 class="govuk-visually-hidden">Support links</h2>
         <ul class="govuk-footer__inline-list">
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="#">
+            <a class="govuk-footer__link" href="https://www.gov.uk/help/accessibility-statement">
               Accessibility statement
             </a>
           </li>
@@ -294,7 +350,7 @@
             </a>
           </li>
           <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="#">
+            <a class="govuk-footer__link" href="https://www.gov.uk/help/terms-conditions">
               Terms and Conditions
             </a>
           </li>

@@ -2,7 +2,13 @@
   <div class="app-cookie-banner static" id="app-cookie-banner">
     <div class="govuk-width-container">
       <div class="govuk-grid-row">
-          <p class="govuk-body-s" style="margin-bottom: 0px; margin-left: 15px;">GOV.UK uses cookies to make the apply for a vehicle test service simpler. <a href="/cookies">Find out more about cookies.</a> </p>
+        <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-heading-m cookies-title">Tell us whether you accept cookies</span>
+          <p>We use <a href="/cookies">cookies to collect information</a> about how you use our service. 
+          We use this information to make the website work as well as possible and improve government services.</p>
+          <button onclick="closeCookieBanner()" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Accept cookies</button>
+          <a href="/cookies"><button style="margin-left: 30px;" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Set cookie preferences</button></a>
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +36,7 @@
       color: #0b0c0c;
       box-sizing: border-box;
       width: 100%;
-      background-color: #d5e4f2;
+      background-color: #f3f2f1;
       color: black;
       margin: 0px;
     }
@@ -132,7 +138,7 @@
       
       <div class="govuk-header__content">
         <a href="/" class="govuk-header__link govuk-header__link--service-name">
-          Apply for a vehicle test
+          Apply for a vehicle test or approval
         </a>
       </div>
     </div>

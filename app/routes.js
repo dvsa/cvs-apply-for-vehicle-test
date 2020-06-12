@@ -32,11 +32,31 @@ router.post('/feedback_answer', function (req, res) {
   let feedback = req.session.data['feedback-res']
 
   if (feedback === 'yes') {
-    res.redirect('/submit_feedback')
+    res.redirect('/submit_feedback');
   } else {
-    res.redirect('/help')
+    res.redirect('/help');
   }
-})
+});
+
+router.post('/1_vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['1-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/1_vehicle_details_yes');
+  } else {
+    res.redirect('/1_vehicle_details_no');
+  }
+});
+
+router.post('/2_vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['2-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/2_vehicle_details_yes');
+  } else {
+    res.redirect('/2_vehicle_details_no');
+  }
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // NO JAVASCRIPT

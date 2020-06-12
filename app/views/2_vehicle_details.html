@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Vehicle details - Apply for a vehicle test - GOV.UK
+  Is your vehicle registered? - Apply for a vehicle test - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,14 +25,14 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 2 of 2 - {{ data['2-select-a-test-type'] }}</span>
-      <h1 class="govuk-heading-xl">Is your vehicle registered in the UK?</h1>
+      <h1 class="govuk-heading-xl">Is your vehicle registered in Great Britain?</h1>
       <!-- <h1 class="govuk-heading-xl">Vehicle details</h1> -->
 
-      <form class="form" action="/2_upload_application_form" method="post">
+      <form class="form" action="/2_vehicle_details_answer" method="post">
 
         <!-- <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2> -->
         <div class="govuk-inset-text">
-          Vehicles registered in the UK have a GB registration number (number plate).<br>
+          Vehicles registered in Great Britain have a GB registration number (number plate).
         </div>
 
         <div class="govuk-form-group">
@@ -44,56 +44,12 @@
                   Yes
                 </label>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-2-is-registered-conditional-1">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="2-vin">
-                    Vehicle identification number (VIN)
-                  </label>
-                  <span id="hint" class="govuk-hint">
-                    Vehicles that are registered:
-                    <ul style="margin-top: 5px;">
-                      <li>after 1980 have a 17 character VIN</li>
-                      <li>before 1980 have an 8 or 21 character VIN</li>
-                    </ul>
-                  </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="2-vin" name="2-vin" type="text">
-                </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="2-vrm">
-                    Vehicle registration mark (VRM)
-                  </label>
-                  <span id="hint" class="govuk-hint">
-                    This must be written in the form AANNBBB, where:
-                    <ul style="margin-top: 5px;">
-                      <li>A is the DVLA memory tag (always required)</li>
-                      <li>N is the age identifier (always required)</li>
-                      <li>B are random letters (not required)</li>
-                    </ul>
-                  </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="2-vrm" name="2-vrm" type="text">
-                </div>
-              </div>
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="2-is-registered-conditional-2" name="2-is-registered" type="radio" value="no" data-aria-controls="conditional-2-is-registered-conditional-2">
                 <label class="govuk-label govuk-radios__label" for="2-is-registered-conditional-2">
                   No
                 </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-2-is-registered-conditional-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="2-vin-no">
-                    Vehicle identification number (VIN)
-                  </label>
-                  <span id="hint" class="govuk-hint">
-                    Vehicles that are registered:
-                    <ul style="margin-top: 5px;">
-                      <li>after 1980 have a 17 character VIN</li>
-                      <li>before 1980 have an 8 or 21 character VIN</li>
-                    </ul>
-                  </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="2-vin" name="2-vin-no" type="text">
-                </div>
               </div>
             </div>
           </fieldset>

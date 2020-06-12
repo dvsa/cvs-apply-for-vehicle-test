@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/summary">Back</a>
+  <a class="govuk-back-link" href="/2_vehicle_details">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -27,7 +27,7 @@
       <span class="govuk-caption-xl">Vehicle 2 of 2 - {{ data['2-select-a-test-type'] }}</span>
       <h1 class="govuk-heading-xl">Vehicle details</h1>
 
-      <form class="form" action="/summary" method="post">
+      <form class="form" action="/2_upload_application_form" method="post">
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="2-vin">
@@ -40,7 +40,7 @@
               <li>before 1980 have an 8 or 21 character VIN</li>
             </ul>
           </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="2-vin" name="2-vin" type="text" value={{ data['2-vin'] }}>
+          <input class="govuk-input govuk-!-width-two-thirds" id="2-vin" name="2-vin" type="text">
         </div>
 
         <div class="govuk-form-group">
@@ -55,7 +55,7 @@
               <li>B are random letters (not required)</li>
             </ul>
           </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="2-vrm" name="2-vrm" type="text" value={{ data['2-vrm'] }}>
+          <input class="govuk-input govuk-!-width-two-thirds" id="2-vrm" name="2-vrm" type="text">
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

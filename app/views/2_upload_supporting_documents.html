@@ -27,7 +27,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 2 of 2 - {{ data['2-select-a-test-type'] }}</span>
-      <h1 class="govuk-heading-xl">Upload supporting documents</h1>
+      <h1 class="govuk-heading-xl">Upload supporting documents (optional)</h1>
 
       <form class="form" action="/2_add_another_vehicle" method="post"> <!-- /2_test_centre_preferences -->
         
@@ -68,9 +68,9 @@
       
           <div class="moj-multi-file-upload__upload">
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-body" for="documents">
+              <!-- <label class="govuk-label govuk-body" for="documents">
                 Supporting documents
-              </label>
+              </label> -->
               <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="2-supporting-documents" type="file" multiple="">
             </div>
       

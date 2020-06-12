@@ -18,7 +18,30 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/1_vehicle_details">Back</a>
+  <a id="link" class="govuk-back-link" href="javascript: history.go(-1)">Back</a>
+  <!-- <script>
+    let no = '';
+    let yes = '';
+
+    let url = [...document.referrer.split('/')].map((x, i) => x);
+    url = url[url.length - 1];
+
+    if (url === '1_vehicle_details_no') {
+      no = url;
+      yes = '';
+    }
+    if (url === '1_vehicle_details_yes') {
+      yes = url;
+      no = '';
+    }
+    
+    if (no.length !== 0) {
+      document.getElementById('link').setAttribute('href', no);
+    }
+    if (yes.length !== 0) {
+      document.getElementById('link').setAttribute('href', yes);
+    }
+  </script> -->
 {% endblock %}
 
 {% block content %}
