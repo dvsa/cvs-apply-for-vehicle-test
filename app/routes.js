@@ -34,7 +34,7 @@ router.post('/feedback_answer', function (req, res) {
   if (feedback === 'yes') {
     res.redirect('/submit_feedback');
   } else {
-    res.redirect('/help');
+    res.redirect('https://www.gov.uk/contact-dvsa/y/mot-vehicle-tests-and-approval');
   }
 });
 
