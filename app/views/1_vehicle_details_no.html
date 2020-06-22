@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Vehicle details - Apply for a vehicle test - GOV.UK
+  Vehicle details - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,7 +30,7 @@
       <form class="form" action="/1_upload_application_form" method="post">
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="1-vin-no">
+          <label class="govuk-label--m" for="1-vin-no">
             Vehicle identification number (VIN)
           </label>
           <span id="hint" class="govuk-hint">

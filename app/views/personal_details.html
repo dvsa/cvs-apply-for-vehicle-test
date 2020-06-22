@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Personal details - Apply for a vehicle test - GOV.UK
+  Your details - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,9 +24,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Personal details</h1>
+      <h1 class="govuk-heading-xl">Your details</h1>
 
-      <form class="form" action="/contact_details" method="post">
+      <form class="form" action="/summary" method="post">
 
         <!-- <div class="govuk-form-group">
           <label class="govuk-label" for="title">
@@ -43,16 +43,37 @@
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="first-name">
-            First name
+            First name ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
           </label>
           <input class="govuk-input govuk-!-width-two-thirds" id="first-name" name="first-name" type="text" autocomplete="given-name" spellcheck="false">
         </div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="last-name">
-            Last name
+            Last name ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
           </label>
           <input class="govuk-input govuk-!-width-two-thirds" id="last-name" name="last-name" type="text" autocomplete="family-name" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="telephone-number">
+            UK telephone number
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email-address">
+            Email address‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="email" autocomplete="email" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="confirm-email-address">
+            Confirm email address
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="confirm-email-address" name="confirm-email-address" type="email" spellcheck="false"> 
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

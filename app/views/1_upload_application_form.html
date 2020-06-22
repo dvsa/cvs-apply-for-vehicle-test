@@ -3,7 +3,7 @@
 {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
 {% block pageTitle %}
-  Upload application form - Apply for a vehicle test - GOV.UK
+  Upload application form - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -53,7 +53,7 @@
       <h1 class="govuk-heading-xl">Upload application form</h1>
 
       <div class="govuk-inset-text">
-        Ensure you have filled out the latest version of the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/840948/apply-for-individual-vehicle-approval-cars.pdf" target="_blank">{{ data['1-select-a-test-type'] }} - v2.8 Sep 2019</a> form.
+        Ensure you have filled out the latest version of the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/840948/apply-for-individual-vehicle-approval-cars.pdf" target="_blank">{{ data['1-select-a-test-type'] }} - v2.8 Sep 2019 (opens in new tab)</a>.
       </div>
 
       <form class="form" action="/1_upload_supporting_documents" method="post">
