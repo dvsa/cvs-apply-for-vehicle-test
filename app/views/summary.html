@@ -47,6 +47,22 @@
             </dd>
           </div>
 
+          {% if data['1-vrm'] %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              VRM
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['1-vrm'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">vrm</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %}
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               VIN
@@ -64,22 +80,6 @@
               </a>
             </dd>
           </div>
-
-          {% if data['1-vrm'] %}
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              VRM
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body">{{ data['1-vrm'] }}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">vrm</span>
-              </a>
-            </dd>
-          </div>
-          {% endif %}
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -177,6 +177,22 @@
             </dd>
           </div>
 
+          {% if data['2-vrm'] %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              VRM
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['2-vrm'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden">vrm</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %}
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               VIN
@@ -194,22 +210,6 @@
               </a>
             </dd>
           </div>
-
-          {% if data['2-vrm'] %}
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              VRM
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body">{{ data['2-vrm'] }}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden">vrm</span>
-              </a>
-            </dd>
-          </div>
-          {% endif %}
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -288,15 +288,16 @@
 
         </dl>
 
-        <h3 class="govuk-heading-m" style="margin-top: 50px">Your details</h3>
+        <h3 class="govuk-heading-m" style="margin-top: 50px">Application contact details</h3>
         <dl class="govuk-summary-list">
 
+          {% if data['company-name'] %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Name
+              Company name
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">{{ data['first-name'] }} {{ data['last-name'] }}</p>
+              <p class="govuk-body">{{ data['company-name'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -304,15 +305,16 @@
               </a>
             </dd>
           </div>
+          {% endif %}
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Contact details
             </dt>
             <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['first-name'] }} {{ data['last-name'] }}</p>
               <p class="govuk-body">{{ data['telephone-number'] }}</p>
               <p class="govuk-body">{{ data['email-address'] }}</p>
-              <p class="govuk-body">{{ data['company-name'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">

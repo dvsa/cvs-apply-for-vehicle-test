@@ -58,6 +58,36 @@ router.post('/2_vehicle_details_answer', function (req, res) {
   }
 });
 
+router.post('/alt/hgv_single/vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['1-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/alt/hgv_single/vehicle_details_yes');
+  } else {
+    res.redirect('/alt/hgv_single/vehicle_details_no');
+  }
+});
+
+router.post('/alt/motorcycle_single_nosup/vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['1-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/alt/motorcycle_single_nosup/vehicle_details_yes');
+  } else {
+    res.redirect('/alt/motorcycle_single_nosup/vehicle_details_no');
+  }
+});
+
+router.post('/alt/trailer_single_nosup/vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['1-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/alt/trailer_single_nosup/vehicle_details_yes');
+  } else {
+    res.redirect('/alt/trailer_single_nosup/vehicle_details_no');
+  }
+});
+
 ////////////////////////////////////////////////////////////////////////////////////////
 // NO JAVASCRIPT
 ////////////////////////////////////////////////////////////////////////////////////////

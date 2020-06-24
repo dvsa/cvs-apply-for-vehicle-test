@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add another vehicle - Apply for a vehicle test - GOV.UK
+  Add another vehicle - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
         alpha
       </strong>
       <span class="govuk-phase-banner__text">
-        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+        This is a new service – your <a class="govuk-link" href="../../feedback" target="_blank">feedback</a> will help us to improve it.
       </span>
     </p>
   </div>
@@ -24,7 +24,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Do you want to add another vehicle?</h1>
+      <h1 class="govuk-heading-xl">Do you want to add another vehicle test or approval?</h1>
+
+      <div class="govuk-inset-text">
+        You can add another test for the same vehicle.
+      </div>
 
       <form class="form" action="/alt/hgv_single/personal_details" method="post">
 
@@ -34,7 +38,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="add-another-vehicle" name="add-another-vehicle" type="radio" value="yes">
                 <label class="govuk-label govuk-radios__label" for="add-another-vehicle">
-                  Yes
+                  Yes, add another vehicle test or approval to my application
                 </label>
               </div>
               <div class="govuk-radios__item">

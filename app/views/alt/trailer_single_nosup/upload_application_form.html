@@ -3,7 +3,7 @@
 {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
 {% block pageTitle %}
-  Upload application form - Apply for a vehicle test - GOV.UK
+  Upload application form - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,7 +30,7 @@
       <h1 class="govuk-heading-xl">Upload application form</h1>
 
       <div class="govuk-inset-text">
-        Ensure you have filled out the latest version of the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/780646/replace-plating-or-test-documents.pdf" target="_blank">{{ data['1-select-a-test-type'] }} - Feb 2019</a> form.
+        Ensure you have filled out the latest version of the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/780646/replace-plating-or-test-documents.pdf" target="_blank">{{ data['1-select-a-test-type'] }} - Feb 2019 (opens in new tab)</a>.
       </div>
 
       <form class="form" action="/alt/trailer_single_nosup/add_another_vehicle" method="post">
@@ -45,9 +45,6 @@
       
           <div class="moj-multi-file-upload__upload">
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-body" for="documents">
-                Application form
-              </label>
               <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="1-application-form" type="file">
             </div>
       

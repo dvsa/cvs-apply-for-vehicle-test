@@ -3,7 +3,7 @@
 {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
 {% block pageTitle %}
-  Upload supporting documents - Apply for a vehicle test - GOV.UK
+  Upload supporting documents - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,12 +27,12 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 1 of 1 - {{ data['1-select-a-test-type'] }}</span>
-      <h1 class="govuk-heading-xl">Upload supporting documents</h1>
+      <h1 class="govuk-heading-xl">Upload supporting documents (optional)</h1>
 
       <form class="form" action="/alt/hgv_single/add_another_vehicle" method="post"> <!-- /1_test_centre_preferences -->
         
         <div class="govuk-inset-text">
-          Refer to the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/782675/application-carriage-dangerous-goods-by-road-adr-iii.pdf" target="_blank">application form</a> for information on what to upload.
+          Refer to the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/782675/application-carriage-dangerous-goods-by-road-adr-iii.pdf" target="_blank">application form (opens in new tab)</a> for information on what to upload.
         </div>
 
         <!-- <table class="govuk-table">
@@ -68,9 +68,6 @@
       
           <div class="moj-multi-file-upload__upload">
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-body" for="documents">
-                Supporting documents (optional)
-              </label>
               <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="1-supporting-documents" type="file" multiple="">
             </div>
       
