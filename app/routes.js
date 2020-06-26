@@ -6,7 +6,7 @@ const cache = require( '../lib/cache' );
 function getErrorMessage(item) {
   var message = '';
   if(item.error.code == 'LIMIT_FILE_SIZE') {
-    message += item.file.originalname + ' must be smaller than 5mb';
+    message += item.file.originalname + ' must be smaller than 50mb';
   }
   return message;
 }
@@ -211,8 +211,8 @@ router.post('/ajax-upload', getUploadedFiles, function( req, res ){
   uploadAjax(req, res, function(error, val1, val2) {
     if(error) {
       if(error.code == 'LIMIT_FILE_SIZE') {
-        // error.message = error.file.originalname + ' must be smaller than 5mb';
-        error.message = 'The file must be smaller than 5mb';
+        // error.message = error.file.originalname + ' must be smaller than 50mb';
+        error.message = 'The file must be smaller than 50mb';
       }
 
       var response = {

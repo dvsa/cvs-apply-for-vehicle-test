@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+{% block pageTitle %}
+  Error: Upload application form - Apply for a vehicle test or approval - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="#">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#form-error">The file must be smaller than 50mb</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - IVA 1C basic category L,M,N,P,T statutory application</span>
+      <h1 class="govuk-heading-xl">Upload application form</h1>
+
+      <div class="govuk-inset-text">
+        Ensure you have filled out the latest version of the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/840948/apply-for-individual-vehicle-approval-cars.pdf" target="_blank">IVA 1C basic category L,M,N,P,T statutory application - v2.8 Sep 2019 (opens in new tab)</a>.
+      </div>
+
+      <form class="form" action="#" method="post">
+
+        <div class="moj-multi-file-upload">
+          <div class="moj-multi-file__uploaded-files moj-hidden">
+            <h2 class="govuk-heading-s">Files added</h2>
+            <div class="govuk-summary-list moj-multi-file-upload__list">
+            </div>
+          </div>
+      
+          <div class="moj-multi-file-upload__upload govuk-form-group--error">
+            <div class="govuk-form-group">
+              <span class="govuk-error-message">
+                <span class="govuk-visually-hidden" id="form-error">Error:</span> The file must be smaller than 50mb
+              </span>
+              <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="1-application-form" type="file" multiple="">
+            </div>
+      
+            <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+              Upload file
+            </button>
+          </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+  <script>
+    if(typeof MOJFrontend.MultiFileUpload !== 'undefined') {
+      new MOJFrontend.MultiFileUpload({
+        container: $('.moj-multi-file-upload'),
+        uploadUrl: '/ajax-upload',
+        deleteUrl: '/ajax-delete'
+      });
+    }
+  </script>
+
+{% endblock %}
