@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Error: Vehicle details - Apply for a vehicle test - GOV.UK
+  Error: Vehicle details - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,10 +31,10 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
+              <a href="#vrm-error">Enter your vehicle registration mark (VRM)</a>
             </li>
             <li>
-              <a href="#vrm-error">Enter your vehicle registration mark (VRM)</a>
+              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
             </li>
           </ul>
         </div>
@@ -46,7 +46,20 @@
       <form class="form" action="#" method="post">
 
         <div class="govuk-form-group govuk-form-group--error">
-          <label class="govuk-label" for="1-vin">
+          <label class="govuk-label--m" for="1-vrm">
+            Vehicle registration mark (VRM)
+          </label>
+          <span id="hint" class="govuk-hint">
+            This is the number plate for the vehicle. For example, CU57ABC
+          </span>
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden" id="vrm-error">Error:</span> Enter your vehicle registration mark (VRM)
+          </span>
+          <input class="govuk-input govuk-!-width-two-thirds" id="1-vrm" name="1-vrm" type="text">
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error" style="margin-top: 60px;">
+          <label class="govuk-label--m" for="1-vin">
             Vehicle identification number (VIN)
           </label>
           <span id="hint" class="govuk-hint">
@@ -60,50 +73,6 @@
             <span class="govuk-visually-hidden" id="vin-error">Error:</span> Enter your vehicle identification number (VIN)
           </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
-        </div>
-
-        <h2 class="govuk-heading-l">Is your vehicle registered in the UK?</h2>
-        <div class="govuk-inset-text">
-          Vehicles registered in the UK have a GB registration number (number plate).<br><br>You can continue if your vehicle is not registered.
-        </div>
-
-        <div class="govuk-form-group govuk-form-group--error">
-          <fieldset class="govuk-fieldset" aria-describedby="1-is-registered-conditional-hint">
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-is-registered-conditional-1" name="1-is-registered" type="radio" value="yes" data-aria-controls="conditional-1-is-registered-conditional-1" checked>
-                <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-1">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="1-vrm">
-                    Vehicle registration mark (VRM)
-                  </label>
-                  <span id="hint" class="govuk-hint">
-                    This must be written in the form AANNBBB, where:
-                    <ul style="margin-top: 5px;">
-                      <li>A is the DVLA memory tag (always required)</li>
-                      <li>N is the age identifier (always required)</li>
-                      <li>B are random letters (not required)</li>
-                    </ul>
-                  </span>
-                  <span class="govuk-error-message">
-                    <span class="govuk-visually-hidden" id="vrm-error">Error:</span> Enter your vehicle registration mark (VRM)
-                  </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="1-vrm" name="1-vrm" type="text">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-is-registered-conditional-2" name="1-is-registered" type="radio" value="no" data-aria-controls="conditional-1-is-registered-conditional-2">
-                <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-2">
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

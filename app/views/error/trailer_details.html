@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Error: Vehicle details - Apply for a vehicle test - GOV.UK
+  Error: Vehicle details - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,10 +31,10 @@
         <div class="govuk-error-summary__body">
           <ul class="govuk-list govuk-error-summary__list">
             <li>
-              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
+              <a href="#trailer-error">Enter your DVSA trailer identification number (Trailer ID)</a>
             </li>
             <li>
-              <a href="#trailer-error">Enter your DVSA trailer identification number (Trailer ID)</a>
+              <a href="#vin-error">Enter your vehicle identification number (VIN)</a>
             </li>
           </ul>
         </div>
@@ -46,7 +46,20 @@
       <form class="form" action="#" method="post">
 
         <div class="govuk-form-group govuk-form-group--error">
-          <label class="govuk-label" for="1-vin">
+          <label class="govuk-label--m" for="trailer-id">
+            DVSA trailer identification number (Trailer ID)
+          </label>
+          <span id="trailer-id-hint" class="govuk-hint">
+            Must be in the format C123456 or 123456T
+          </span>
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden" id="trailer-error">Error:</span> Enter your DVSA trailer identification number (Trailer ID)
+          </span>
+          <input class="govuk-input govuk-!-width-two-thirds" id="trailer-id" name="trailer-id" type="text">
+        </div>
+
+        <div class="govuk-form-group govuk-form-group--error" style="margin-top: 60px;">
+          <label class="govuk-label--m" for="1-vin">
             Vehicle identification number (VIN)
           </label>
           <span id="hint" class="govuk-hint">
@@ -60,45 +73,6 @@
             <span class="govuk-visually-hidden" id="vin-error">Error:</span> Enter your vehicle identification number (VIN)
           </span>
           <input class="govuk-input govuk-!-width-two-thirds" id="1-vin" name="1-vin" type="text">
-        </div>
-
-        <h2 class="govuk-heading-l">Is your trailer registered with DVSA?</h2>
-        <div class="govuk-inset-text">
-          If your trailer has a DVSA trailer identification number like C123456 or 123456T, your trailer is registered with DVSA.<br><br>Your trailer does not need to be registered to continue.
-        </div>
-
-        <div class="govuk-form-group govuk-form-group--error">
-          <fieldset class="govuk-fieldset" aria-describedby="1-is-registered-conditional-hint">
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-is-registered-conditional-1" name="1-is-registered" type="radio" value="yes" data-aria-controls="conditional-1-is-registered-conditional-1" checked>
-                <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-1">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-is-registered-conditional-1">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="trailer-id">
-                    DVSA trailer identification number (Trailer ID)
-                  </label>
-                  <span id="trailer-id-hint" class="govuk-hint">
-                    Must be in the format C123456 or 123456T
-                  </span>
-                  <span class="govuk-error-message">
-                    <span class="govuk-visually-hidden" id="trailer-error">Error:</span> Enter your DVSA trailer identification number (Trailer ID)
-                  </span>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="trailer-id" name="trailer-id" type="text">
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-is-registered-conditional-2" name="1-is-registered" type="radio" value="no" data-aria-controls="conditional-1-is-registered-conditional-2">
-                <label class="govuk-label govuk-radios__label" for="1-is-registered-conditional-2">
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
