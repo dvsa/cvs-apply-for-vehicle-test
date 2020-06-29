@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Test type - Apply for a vehicle test - GOV.UK
+  Test type - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,10 +25,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 1 of 1</span>
-      <h1 class="govuk-heading-xl">Test type</h1>
+      <h1 class="govuk-heading-xl">Select a test type</h1>
 
       <div class="govuk-inset-text">
-        Clicking on a test type will reveal more information on that test type. For example, the description of that test.
+        Clicking on a test type will reveal more information about the test.
       </div>
 
       <form class="form" action="/alt/hgv_single/vehicle_details" method="post">
@@ -38,9 +38,9 @@
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="ADR III first time / changes" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="ADR III first time/ changes" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-1">
-                  ADR III first time / changes
+                  ADR III first time/ changes
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-1">
