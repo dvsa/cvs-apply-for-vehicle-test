@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/alt/motorcycle_single_nosup/vehicle_type">Back</a>
+  <a class="govuk-back-link" href="/alt/hgv_single_emission/application_type">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -25,28 +25,28 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 1 of 1</span>
-      <h1 class="govuk-heading-xl">What motorcycle single vehicle approval (MSVA) application do you need?</h1>
+      <h1 class="govuk-heading-xl">What emission certificate application do you need?</h1>
 
       <div class="govuk-inset-text">
         Clicking on an option will reveal more information about it.
       </div>
 
-      <form class="form" action="/alt/motorcycle_single_nosup/vehicle_details" method="post">
+      <form class="form" action="/alt/hgv_single_emission/vehicle_details" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="1-select-a-test-type-conditional-hint">
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="MSVA 1 test application" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="Declaration of conformity of fitment of an approved exhaust abatement device" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-1">
-                  Get an approval for a motorcycle I have built/imported
+                  Declare that my approved exhaust abatement device is fitted correctly
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-1">
                 <p class="govuk-hint">
                   <span class="govuk-hint">
-                    This includes the 'MSVA 1 test application'.
+                    This includes the 'Declaration of conformity of fitment of an approved exhaust abatement device'.
                   </span>
 
                   <br>
@@ -54,48 +54,24 @@
                   <span class="govuk-hint">
                     Expected processing time from date of submission: <strong>10 days</strong>
                   </span>
-
-                  <br>
-
-                  <span class="govuk-hint">
-                    Before you continue, ensure you have read the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/781666/guidance-on-filling-in-the-mvsa-application-form.pdf" target="_blank">guidance documentation (opens in new tab)</a> for this test type.
-                  </span>
                 </p>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-2" name="1-select-a-test-type" type="radio" value="PMSVA 1 partial test MSVA application" data-aria-controls="conditional-1-select-a-test-type-conditional-2">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-2" name="1-select-a-test-type" type="radio" value="Declaration of testing of an approved exhaust abatement device" data-aria-controls="conditional-1-select-a-test-type-conditional-2">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-2">
-                  Get an approval for a motorcycle I have modified for use in Great Britain
+                  Declare that my approved exhaust abatement device has been tested
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-2">
                 <span class="govuk-hint">
-                  This includes the 'PMSVA 1 partial test MSVA application'.
+                  This includes the 'Declaration of testing of an approved exhaust abatement device'.
                 </span>
 
                 <br>
 
                 <span class="govuk-hint">
                   Expected processing time from date of submission: <strong>10 days</strong>
-                </span>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-3" name="1-select-a-test-type" type="radio" value="IVA 5 request for replacement certificate" data-aria-controls="conditional-1-select-a-test-type-conditional-3">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-3">
-                  Replace my Individual Vehicle Approval (IVA) certificate(s)
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-3">
-                <span class="govuk-hint">
-                  This includes the 'IVA 5 request for replacement certificate'.
-                </span>
-
-                <br>
-
-                <span class="govuk-hint">
-                  Expected processing time from date of submission: <strong>5 days</strong>
                 </span>
               </div>
             </div>

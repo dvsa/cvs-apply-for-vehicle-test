@@ -25,10 +25,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <span class="govuk-caption-xl">Vehicle 1 of 1</span>
-      <h1 class="govuk-heading-xl">Select a test type</h1>
+      <h1 class="govuk-heading-xl">What ADR carriage of dangerous goods application do you need?</h1>
 
       <div class="govuk-inset-text">
-        Clicking on a test type will reveal more information about the test.
+        Clicking on an option will reveal more information about it.
       </div>
 
       <form class="form" action="/alt/hgv_single/vehicle_details" method="post">
@@ -38,76 +38,87 @@
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="ADR III first time/ changes" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-1" name="1-select-a-test-type" type="radio" value="ADR III" data-aria-controls="conditional-1-select-a-test-type-conditional-1">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-1">
-                  ADR III first time/ changes
+                  Get an initial ADR certificate
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-1">
-                <p class="govuk-body">
-                  Application for first ADR road vehicle certification or a change to existing ADR category.
+                <p class="govuk-hint">
+                  <span class="govuk-hint">
+                    This includes the following test types:
+                    <ul class="govuk-hint govuk-list--bullet">
+                      <li>ADR III first time/changes</li>
+                      <li>ADR IIIA type approved tractor unit</li>
+                    </ul>
+                  </span>
+
+                  <br>
+
+                  <span class="govuk-hint">
+                    Expected processing time from date of submission: <strong>5 days</strong>
+                  </span>
                 </p>
-                <br>
-                <p class="govuk-body">Expected processing time (from date of submission): <strong>5 days</strong></p>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-2" name="1-select-a-test-type" type="radio" value="ADR IIIA type approved tractor unit" data-aria-controls="conditional-1-select-a-test-type-conditional-2">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-2" name="1-select-a-test-type" type="radio" value="ADR IIIr replacement" data-aria-controls="conditional-1-select-a-test-type-conditional-2">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-2">
-                  ADR IIIA type approved tractor unit
+                  Replace my ADR certificate
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-2">
-                <p class="govuk-body">Expected processing time (from date of submission): <strong>5 days</strong></p>
+                <span class="govuk-hint">
+                  This includes the 'ADR IIIr replacement'.
+                </span>
+
+                <br>
+
+                <span class="govuk-hint">
+                  Expected processing time from date of submission: <strong>5 days</strong>
+                </span>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-3" name="1-select-a-test-type" type="radio" value="ADR IIIr replacement" data-aria-controls="conditional-1-select-a-test-type-conditional-3">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-3" name="1-select-a-test-type" type="radio" value="ADR IIIs subsequent" data-aria-controls="conditional-1-select-a-test-type-conditional-3">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-3">
-                  ADR IIIr replacement
+                  Get a subsequent ADR certificate
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-3">
-                <p class="govuk-body">
-                  Replacement certificate.
-                </p>
+                <span class="govuk-hint">
+                  This includes the 'ADR IIIs subsequent'.
+                </span>
+
                 <br>
-                <p class="govuk-body">Expected processing time (from date of submission): <strong>5 days</strong></p>
+
+                <span class="govuk-hint">
+                  Expected processing time from date of submission: <strong>5 days</strong>
+                </span>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-4" name="1-select-a-test-type" type="radio" value="ADR IIIs subsequent" data-aria-controls="conditional-1-select-a-test-type-conditional-4">
+                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-4" name="1-select-a-test-type" type="radio" value="ADR III (Northern Ireland)" data-aria-controls="conditional-1-select-a-test-type-conditional-4">
                 <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-4">
-                  ADR IIIs subsequent
+                  Get an ADR certificate (Northern Ireland)
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-4">
-                <p class="govuk-body">
-                  ADR vehicles and trailers applying for subsequent ADR tests where the ADR category has remained the same since the last ADR examination. Modifications that have been made to the vehicle or trailer that would invalidate the manufacturer’s initial ADR declarations.
-                </p>
+                <span class="govuk-hint">
+                  This includes the following test types:
+                  <ul class="govuk-hint govuk-list--bullet">
+                    <li>ADR III for Northern Ireland only</li>
+                    <li>Type approved tractor unit for Northern Ireland only</li>
+                  </ul>
+                </span>
+
                 <br>
-                <p class="govuk-body">Expected processing time (from date of submission): <strong>5 days</strong></p>
-              </div>
 
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-5" name="1-select-a-test-type" type="radio" value="ADR III for Northern Ireland only" data-aria-controls="conditional-1-select-a-test-type-conditional-5">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-5">
-                  ADR III for Northern Ireland only
-                </label>
+                <span class="govuk-hint">
+                  Expected processing time from date of submission: <strong>3 days</strong>
+                </span>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-5">
-                <p class="govuk-body">Expected processing time (from date of submission): <strong>3 days</strong></p>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-test-type-conditional-6" name="1-select-a-test-type" type="radio" value="Type approved tractor unit for Northern Ireland only" data-aria-controls="conditional-1-select-a-test-type-conditional-6">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-test-type-conditional-6">
-                  Type approved tractor unit for Northern Ireland only
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-1-select-a-test-type-conditional-6">
-                <p class="govuk-body">Expected processing time (from date of submission): <strong>3 days</strong></p>
-              </div>
+            </div>
 
           </fieldset>
         </div>

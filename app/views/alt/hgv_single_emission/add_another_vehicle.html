@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add another vehicle - Apply for a vehicle test or approval - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="../../feedback" target="_blank">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/alt/hgv_single_emission/upload_supporting_documents">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Do you want to add another vehicle test or approval?</h1>
+
+      <div class="govuk-inset-text">
+        You can add another test for the same vehicle.
+      </div>
+
+      <form class="form" action="/alt/hgv_single_emission/personal_details" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="add-another-vehicle-hint">
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another-vehicle" name="add-another-vehicle" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="add-another-vehicle">
+                  Yes, add another vehicle test or approval to my application
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-another-vehicle-2" name="add-another-vehicle" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="add-another-vehicle-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+{% block pageTitle %}
+  Upload application form - Apply for a vehicle test or approval - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+  <a class="govuk-back-link" href="/alt/hgv_single_test_skip/vehicle_details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Vehicle 1 of 1 - Request for certificate of keeper</span>
+      <h1 class="govuk-heading-xl">Upload application form</h1>
+
+      <div class="govuk-inset-text">
+        Ensure you have filled out the latest version of the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/782675/application-carriage-dangerous-goods-by-road-adr-iii.pdf" target="_blank">{{ data['1-select-a-test-type'] }} - Feb 2019 (opens in new tab)</a>.
+      </div>
+
+      <form class="form" action="/alt/hgv_single_test_skip/add_another_vehicle" method="post">
+
+        <div class="moj-multi-file-upload">
+          <div class="moj-multi-file__uploaded-files moj-hidden">
+            <h2 class="govuk-heading-s">Files added</h2>
+            <div class="govuk-summary-list moj-multi-file-upload__list">
+        
+            </div>
+          </div>
+      
+          <div class="moj-multi-file-upload__upload">
+            <div class="govuk-form-group">
+              <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="1-application-form" type="file">
+            </div>
+      
+            <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+              Upload file
+            </button>
+          </div>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block pageScripts %}
+
+  <script>
+    if(typeof MOJFrontend.MultiFileUpload !== 'undefined') {
+      new MOJFrontend.MultiFileUpload({
+        container: $('.moj-multi-file-upload'),
+        uploadUrl: '/ajax-upload',
+        deleteUrl: '/ajax-delete'
+      });
+    }
+  </script>
+
+{% endblock %}

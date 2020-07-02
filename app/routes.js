@@ -88,6 +88,26 @@ router.post('/alt/trailer_single_nosup/vehicle_details_answer', function (req, r
   }
 });
 
+router.post('/alt/hgv_single_test_skip/vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['1-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/alt/hgv_single_test_skip/vehicle_details_yes');
+  } else {
+    res.redirect('/alt/hgv_single_test_skip/vehicle_details_no');
+  }
+});
+
+router.post('/alt/hgv_single_emission/vehicle_details_answer', function (req, res) {
+  let feedback = req.session.data['1-is-registered']
+
+  if (feedback === 'yes') {
+    res.redirect('/alt/hgv_single_emission/vehicle_details_yes');
+  } else {
+    res.redirect('/alt/hgv_single_emission/vehicle_details_no');
+  }
+});
+
 ////////////////////////////////////////////////////////////////////////////////////////
 // NO JAVASCRIPT
 ////////////////////////////////////////////////////////////////////////////////////////

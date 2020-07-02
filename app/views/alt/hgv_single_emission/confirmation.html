@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Application complete - Apply for a vehicle test or approval - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/alt/hgv_single_emission" method="post">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">Application complete</h1>
+          <div class="govuk-panel__body">
+            Your reference number<br><strong>APP-0000-6048</strong>
+          </div>
+        </div>
+
+        <p>
+          We have sent you a confirmation email.
+        </p>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p>DVSA has received your vehicle test application.<br><br>Keep this reference number as you will need it later to pay and book your vehicle test(s).</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

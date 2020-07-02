@@ -16,7 +16,7 @@
     </p>
   </div>
 
-  <a class="govuk-back-link" href="/alt/motorcycle_single_nosup/personal_details">Back</a>
+  <a class="govuk-back-link" href="/alt/hgv_single_test_skip/personal_details">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,7 +26,7 @@
 
       <h1 class="govuk-heading-xl">Check your answers</h1>
 
-      <form class="form" action="/alt/motorcycle_single_nosup/confirmation" method="post">
+      <form class="form" action="/alt/hgv_single_test_skip/confirmation" method="post">
 
         <h3 class="govuk-heading-m">Vehicle 1 of 1</h3>
         <dl class="govuk-summary-list">
@@ -37,8 +37,8 @@
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">{{ data['1-select-a-vehicle-type'] }}</p>
-              <p class="govuk-body">Motorcycle single vehicle approval (MSVA)</p>
-              <p class="govuk-body">{{ data['1-select-a-test-type'] }}</p>
+              <p class="govuk-body">{{ data['1-select-an-application-type'] }}</p>
+              <p class="govuk-body">Request for certificate of keeper</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -102,7 +102,7 @@
             <dd class="govuk-summary-list__value">
             </dd>
             <dd class="govuk-summary-list__actions">
-              10 days<span class="govuk-visually-hidden">expected processing time</span>
+              5 days<span class="govuk-visually-hidden">expected processing time</span>
             </dd>
           </div>
 
