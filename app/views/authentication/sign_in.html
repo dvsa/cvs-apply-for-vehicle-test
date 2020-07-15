@@ -4,10 +4,10 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <span class="govuk-heading-m cookies-title">Tell us whether you accept cookies</span>
-          <p>We use <a href="/cookies">cookies to collect information</a> about how you use our service. 
+          <p>We use <a href="../cookies">cookies to collect information</a> about how you use our service. 
           We use this information to make the website work as well as possible and improve government services.</p>
           <button onclick="closeCookieBanner()" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Accept cookies</button>
-          <a href="/cookies"><button style="margin-left: 30px;" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Set cookie preferences</button></a>
+          <a href="../cookies"><button style="margin-left: 30px;" type="submit"  class="govuk-button cookies-button" data-module="govuk-button">Set cookie preferences</button></a>
         </div>
       </div>
     </div>
@@ -140,10 +140,6 @@
         <a href="/" class="govuk-header__link govuk-header__link--service-name">
           Apply for a vehicle test or approval
         </a>
-        <p class="govuk-body" style="float: right; color: #f3f2f1; margin: 0 0 10px 0;">
-          <a class="govuk-header__link" href="/authentication/edit_account" style="font-size: 16px; padding-right: 15px; cursor: pointer;">John Sharma</a>
-          <a class="govuk-header__link" href="/authentication/sign_in" style="font-size: 16px; font-weight: bold; cursor: pointer;">Sign out</a>
-      </p>
       </div>
     </div>
   </header>
@@ -152,7 +148,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Vehicle type - Apply for a vehicle test or approval - GOV.UK
+  Sign in to your account - Apply for a vehicle test or approval - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -167,7 +163,7 @@
     </p>
   </div>
 
-  <!-- <a class="govuk-back-link" href="/authentication/sign_in">Back</a> -->
+  <a class="govuk-back-link" href="/">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -175,55 +171,40 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-xl">Vehicle 1 of 1</span>
-      <h1 class="govuk-heading-xl">Select a vehicle type</h1>
+      <h1 class="govuk-heading-xl">Sign in to your account</h1>
 
-      <form class="form" action="/1_test_type" method="post">
+      <form class="form" action="../1_vehicle_type" method="post">
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type" name="1-select-a-vehicle-type" type="radio" value="Heavy goods vehicle (HGV)">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type">
-                  Heavy goods vehicle (HGV)
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type-2" name="1-select-a-vehicle-type" type="radio" value="Trailer">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-2">
-                  Trailer
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type-3" name="1-select-a-vehicle-type" type="radio" value="Light goods vehicle (LGV)">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-3">
-                  Light goods vehicle (LGV)
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type-4" name="1-select-a-vehicle-type" type="radio" value="Public service vehicle (PSV)">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-4">
-                  Public service vehicle (PSV)
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type-5" name="1-select-a-vehicle-type" type="radio" value="Car">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-5">
-                  Passenger car
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-select-a-vehicle-type-6" name="1-select-a-vehicle-type" type="radio" value="Motorcycle">
-                <label class="govuk-label govuk-radios__label" for="1-select-a-vehicle-type-6">
-                  Motorcycle
-                </label>
-              </div>
+        <fieldset class="govuk-fieldset">
+
+            <div class="govuk-inset-text">
+                You must <a class="govuk-link" href="/authentication/create_account">create an account</a> if you do not have one.
+                <br><br>
+                You can also use your <a class="govuk-link" href="https://my-atf-b.herokuapp.com/phase11/landing-page" target="_blank">Manage your authorised testing facility (opens in new tab)</a> portal account to sign in.
             </div>
-          </fieldset>
-        </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="email-address">
+                  Email address
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="email">
+            </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="password">
+                  Password
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="password" name="password" type="password">
+            </div>
+            
+        </fieldset>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <h3 class="govuk-heading-m">Problems signing in</h3>
+        <p>
+            <a class="govuk-link" href="/authentication/forgotten_password">I have forgotten my password</a>
+        </p>
 
       </form>
 
